@@ -51,13 +51,24 @@ public class AudioManager : MonoBehaviour
         musicSource.clip = music;
         musicSource.Play();
     }
-
+    public void PlayBasemusic() {
+        musicSource.clip = backgroundMusic;
+        musicSource.loop = true;
+        musicSource.Play();
+    }
     // Pausa la música de fondo
     public void PauseMusic()
     {
         musicSource.Pause();
     }
+    public void StopMusic() {
+        musicSource.Stop();
+    }
 
+    public void PauseMusic(AudioClip _clip) {
+        musicSource.clip = _clip;
+        musicSource.Play();
+    }
     // Puedes agregar más funciones relacionadas con el manejo de música y efectos de sonido aquí
 
     // ...

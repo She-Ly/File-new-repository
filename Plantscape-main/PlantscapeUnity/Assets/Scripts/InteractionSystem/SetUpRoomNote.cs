@@ -37,7 +37,7 @@ public class SetUpRoomNote : MonoBehaviour, IInteractable
         AudioManager.instance.PlaySoundEffect(sonidoTriunfal);
 
         // Agrega la música en loop para la habitación
-        AudioManager.instance.PlayMusic(setRoom;
+        AudioManager.instance.PlayMusic(setRoom);
         return true;
     }
     public void ExitRoom()

@@ -21,7 +21,7 @@ public class AreaContaminada : MonoBehaviour
             timerUI.SetActive(true);
             if (contaminado != null)
             {
-                AudioManager.instance.PlayMusic(contaminado); ;
+                AudioManager.instance.PlayMusic(contaminado);
             }
             // Add any other necessary actions here
         }
@@ -36,7 +36,8 @@ public class AreaContaminada : MonoBehaviour
             timerUI.SetActive(false); // Hide the timer UI
             if (!IsAnyOtherReasonToPlayMusic())
             {
-                AudioManager.instance.PauseMusic(contaminado);
+                AudioManager.instance.PlayBasemusic();
+                //AudioManager.instance.PauseMusic(contaminado);
             }
 
         }
@@ -45,5 +46,9 @@ public class AreaContaminada : MonoBehaviour
     public void TriggerDialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+    }
+
+    private bool IsAnyOtherReasonToPlayMusic() {
+        return false;
     }
 }

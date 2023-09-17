@@ -510,8 +510,11 @@ MonoBehaviour:
     hasDifferentInteractions: 
   continueButton: {fileID: 1179447991}
   optionsButton: {fileID: 163122751}
-  planta3D: {fileID: 38999155}
+  plantaVieja: {fileID: 0}
+  plantaNueva: {fileID: 0}
   waterManager: {fileID: 0}
+  agarrarPlanta: {fileID: 0}
+  regarPlanta: {fileID: 0}
 --- !u!65 &38999158
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1270,6 +1273,7 @@ MonoBehaviour:
     hasDifferentInteractions: 00
   timer: {fileID: 1607706223}
   timerUI: {fileID: 1607706219}
+  contaminado: {fileID: 0}
 --- !u!65 &208862176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2189,6 +2193,7 @@ MonoBehaviour:
     sentences:
     - "Es un agujero gigante. Necesitar\xE1s ayuda para poder bajar."
     hasDifferentInteractions: 00
+  sotano: {fileID: 0}
 --- !u!65 &429536457
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2291,6 +2296,7 @@ MonoBehaviour:
     - "\xA1Excelente! Esperemos que tu semilla germine pronto."
     hasDifferentInteractions: 00
   interactionPromptUI: {fileID: 1108659863}
+  sembrar: {fileID: 0}
 --- !u!65 &485765151
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2533,6 +2539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 427593723}
   animator: {fileID: 496020036}
+  dialogoSonido: {fileID: 0}
   IsDialogueActive: 0
   lastSentence: 0
 --- !u!4 &526952247
@@ -2959,6 +2966,7 @@ MonoBehaviour:
     hasDifferentInteractions: 01
   continueButton: {fileID: 1179447991}
   optionsButton: {fileID: 0}
+  transportador: {fileID: 0}
 --- !u!65 &652845968
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3179,6 +3187,7 @@ MonoBehaviour:
       necesite?"
     hasDifferentInteractions: 0100
   dialogueManager: {fileID: 526952246}
+  agarrarPlanta: {fileID: 0}
 --- !u!1 &694005390
 GameObject:
   m_ObjectHideFlags: 0
@@ -4060,6 +4069,7 @@ MonoBehaviour:
     hasDifferentInteractions: 00
   timer: {fileID: 1607706223}
   timerUI: {fileID: 1607706219}
+  contaminado: {fileID: 0}
 --- !u!65 &795946265
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4735,6 +4745,7 @@ MonoBehaviour:
     - "Esta planta no pertenece a este h\xE1bitat."
     hasDifferentInteractions: 00
   interactionPromptUI: {fileID: 1108659863}
+  sembrar: {fileID: 0}
 --- !u!65 &942651602
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7673,10 +7684,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -8420,6 +8431,8 @@ MonoBehaviour:
     - "Parece que hab\xEDa algo debajo de la nota."
     hasDifferentInteractions: 
   interactionPromptUI: {fileID: 1108659863}
+  sonidoTriunfal: {fileID: 0}
+  setRoom: {fileID: 0}
 --- !u!65 &1550994832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9093,6 +9106,8 @@ MonoBehaviour:
     - "\u2026"
     - "\xBFEso fue un gato?"
     hasDifferentInteractions: 00000000
+  invernadero: {fileID: 0}
+  mauw: {fileID: 0}
 --- !u!65 &1693725112
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10008,8 +10023,11 @@ MonoBehaviour:
     hasDifferentInteractions: 
   continueButton: {fileID: 1179447991}
   optionsButton: {fileID: 717108913}
-  planta3D: {fileID: 1874217075}
+  plantaVieja: {fileID: 0}
+  plantaNueva: {fileID: 0}
   waterManager: {fileID: 0}
+  agarrarPlanta: {fileID: 0}
+  regarPlanta: {fileID: 0}
 --- !u!65 &1883979203
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10957,6 +10975,7 @@ MonoBehaviour:
     sentences:
     - "\xA1Has encontrado una tarjeta de acceso!"
     hasDifferentInteractions: 
+  llave: {fileID: 0}
 --- !u!1 &2121235710
 GameObject:
   m_ObjectHideFlags: 0
@@ -11104,6 +11123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  pasos: {fileID: 0}
 --- !u!54 &2121235717
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11171,7 +11191,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121235710}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fce69e51a8b26e341813bbb4defc7215, type: 3}
   m_Name: 
@@ -11186,6 +11206,7 @@ MonoBehaviour:
     sentences:
     - No tienes suficiente agua.
     hasDifferentInteractions: 00
+  emptyWaterSound: {fileID: 0}
 --- !u!1 &2127686222
 GameObject:
   m_ObjectHideFlags: 0
@@ -23885,6 +23906,7 @@ MonoBehaviour:
     - "Esta planta no pertenece a este h\xE1bitat."
     hasDifferentInteractions: 00
   interactionPromptUI: {fileID: 1108659863}
+  sembrar: {fileID: 0}
 --- !u!1 &4146355732840561590
 GameObject:
   m_ObjectHideFlags: 0
@@ -35292,6 +35314,7 @@ MonoBehaviour:
     hasDifferentInteractions: 01
   continueButton: {fileID: 1179447991}
   optionsButton: {fileID: 0}
+  transportador: {fileID: 0}
 --- !u!1 &7805644895886261214
 GameObject:
   m_ObjectHideFlags: 0

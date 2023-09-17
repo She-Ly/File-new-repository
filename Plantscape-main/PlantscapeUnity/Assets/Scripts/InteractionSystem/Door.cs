@@ -5,6 +5,7 @@ using UnityEngine;
 public class Door : MonoBehaviour, IInteractable
 {
     private bool isDialogueInProgress = false;
+    private Animator doorAnimation;
 
     [SerializeField] private string _prompt;
     public string InteractionPrompt => _prompt;
@@ -14,6 +15,11 @@ public class Door : MonoBehaviour, IInteractable
 
     public Key key;
     public GameObject puerta;
+
+    void Start()
+    {
+        doorAnimation = puerta.GetComponent<Animator>();
+    }
 
     public bool Interact(Interactor interactor)
     {
@@ -26,8 +32,8 @@ public class Door : MonoBehaviour, IInteractable
         if (key.hasKey)
         {
             StartCoroutine(TriggerAndHandleDialogue(secondDialogue));
-            puerta.SetActive(false);
-            key.llaveUI.SetActive(false);
+            // Play the door opening animation
+            doorAnimation.Play("SlideDoor");
         }
         else
         {
@@ -36,6 +42,21 @@ public class Door : MonoBehaviour, IInteractable
 
         return true;
     }
+
+    // Método que se llamará desde el evento de animación de apertura
+    public void StartClosingAnimation()
+    {
+        // Play the door closing animation
+        StartCoroutine(WaitingcloseDoor());
+
+        // doorAnimation.Play("CloseDoor");
+    }
+    IEnumerator WaitingcloseDoor()
+    {
+        yield return new WaitForSeconds(3);
+        doorAnimation.Play("CloseDoor");
+    }
+
 
     public void TriggerDialogue(Dialogue dialogue)
     {

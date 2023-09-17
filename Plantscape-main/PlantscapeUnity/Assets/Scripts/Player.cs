@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     private Animator animator;
 
     private Vector3 initialCameraPosition;
-    public AudioClip pasos;
+    //public AudioClip pasos;
 
     void Start()
     {
@@ -41,9 +41,9 @@ public class Player : MonoBehaviour
                 moveDirection = 2.0f; // Up
             else if (moveVertical < 0)
                 moveDirection = 4.0f; // Down
-            if (pasos != null)
+           // if (pasos != null)
             {
-                AudioManager.instance.PlaySoundEffect(pasos);
+                //AudioManager.instance.PlaySoundEffect(pasos);
             }
         }
 

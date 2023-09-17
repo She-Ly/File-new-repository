@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 854195d58bf65b442bc9de3a044d21e7
   - enabled: 1
-    path: Assets/Scenes/StartCinematic.unity
-    guid: 2e922280f8d4c0749b7c670878bd5254
-  - enabled: 1
-    path: Assets/Scenes/EscenaEscenarioFinal.unity
-    guid: fa1dc7fd6392eb54faf24cb0d60afe89
+    path: Assets/Scenes/Plantscape.unity
+    guid: b230c93f633f0ad408bd4b1834a96c99
   m_configObjects: {}
