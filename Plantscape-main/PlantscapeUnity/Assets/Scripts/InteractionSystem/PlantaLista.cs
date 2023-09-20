@@ -14,9 +14,11 @@ public class PlantaLista : MonoBehaviour, IInteractable
     public string InteractionPrompt => _prompt;
 
     public Dialogue dialogue;
+    public Dialogue secondDialogue;
     public DialogueManager dialogueManager;
 
-    public GameObject planta3D;
+    public Item plantaItem;
+    public Inventory inventory;
     public AudioClip agarrarPlanta;
 
     public bool Interact(Interactor interactor)
@@ -75,12 +77,14 @@ public class PlantaLista : MonoBehaviour, IInteractable
 
     public void AgarrarPlanta()
     {
-        if (agarrarPlanta != null)
+        if (inventory != null)
         {
-            AudioManager.instance.PlaySoundEffect(agarrarPlanta);
+            Item plantaItem = GetComponent<ItemObject>().itemReference;
+            inventory.AddItem(plantaItem);
+
+            Destroy(gameObject);
         }
-        //referencia al inventario para saber que ese slot esta ocupado
-        planta3D.SetActive(false);
+        TriggerDialogue(secondDialogue);
 
     }
 

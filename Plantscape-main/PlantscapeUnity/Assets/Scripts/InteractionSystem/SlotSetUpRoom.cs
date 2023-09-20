@@ -2,23 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlantaSetUpRoom : MonoBehaviour, IInteractable
+public class SlotSetUpRoom : MonoBehaviour, IInteractable
 {
-    private bool isDialogueInProgress = false;
-    public GameObject interactionPromptUI;
+    [SerializeField] private string _prompt;
+    public string InteractionPrompt => _prompt;
 
-    public GameObject inventarioUI;
-    public Item plantaItem;
+    public PlantaSetUpRoom planta;
+
+    public GameObject newSlot;
+
     public Inventory inventory;
 
     public GameObject continueButton;
     public GameObject optionsButton;
 
-    [SerializeField] private string _prompt;
-    public string InteractionPrompt => _prompt;
+    public Dialogue firstDialogue;
+    public Dialogue secondDialogue;
+    public Dialogue thirdDialogue;
 
-    public Dialogue dialogue;
-    public DialogueManager dialogueManager;
+    private bool isDialogueInProgress = false;
+    public GameObject interactionPromptUI; 
 
     public bool Interact(Interactor interactor)
     {
@@ -30,13 +33,14 @@ public class PlantaSetUpRoom : MonoBehaviour, IInteractable
         interactionPromptUI.SetActive(false);
 
         // Check if any sentence in the dialogue has different interactions
-        bool hasDifferentInteractions = CheckForDifferentInteractions(dialogue);
+        bool hasDifferentInteractions = CheckForDifferentInteractions(firstDialogue);
+
 
         // Show/hide buttons based on the result
         continueButton.SetActive(!hasDifferentInteractions);
         optionsButton.SetActive(hasDifferentInteractions);
 
-        TriggerDialogue(dialogue);
+        StartCoroutine(TriggerAndHandleDialogue(firstDialogue));
 
         return true;
     }
@@ -44,7 +48,6 @@ public class PlantaSetUpRoom : MonoBehaviour, IInteractable
     public void TriggerDialogue(Dialogue dialogue)
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-
     }
 
     private IEnumerator TriggerAndHandleDialogue(Dialogue dialogue)
@@ -56,7 +59,6 @@ public class PlantaSetUpRoom : MonoBehaviour, IInteractable
         {
             yield return null;
         }
-        
         interactionPromptUI.SetActive(true);
         isDialogueInProgress = false;
     }
@@ -74,22 +76,27 @@ public class PlantaSetUpRoom : MonoBehaviour, IInteractable
         return false;
     }
 
-    public void AgarrarPlanta()
+    public void Plantar()
     {
-        if (inventory != null)
+        if (inventory != null && inventory.HasItem(planta.plantaItem))
         {
-            Item plantaItem = GetComponent<ItemObject>().itemReference;
-            inventory.AddItem(plantaItem);
-
-            inventarioUI.SetActive(true);
+            newSlot.SetActive(true);
             Destroy(gameObject);
+            StartCoroutine(TriggerAndHandleDialogue(thirdDialogue));
+            inventory.UseItem(planta.plantaItem);
         }
+         else
+        { 
+            // Handle the case where the seed item is not in the inventory
+            EsconderOpciones();
+            StartCoroutine(TriggerAndHandleDialogue(secondDialogue));
+        }
+
     }
 
     public void EsconderOpciones()
     {
-        continueButton.SetActive(true);
         optionsButton.SetActive(false);
+        continueButton.SetActive(true);
     }
-
 }

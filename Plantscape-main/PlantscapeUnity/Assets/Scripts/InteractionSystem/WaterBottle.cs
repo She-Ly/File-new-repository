@@ -46,7 +46,7 @@ public class WaterBottle : MonoBehaviour, IInteractable
     public void TriggerDialogue(Dialogue dialogue)
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-        botella.SetActive(false);
+        Destroy(botella);
     }
 
     private IEnumerator TriggerAndHandleDialogue(Dialogue dialogue)

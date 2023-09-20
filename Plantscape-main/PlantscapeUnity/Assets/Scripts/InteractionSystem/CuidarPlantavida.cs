@@ -2,23 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlantaSetUpRoom : MonoBehaviour, IInteractable
+public class CuidarPlantaVida : MonoBehaviour, IInteractable
 {
-    private bool isDialogueInProgress = false;
-    public GameObject interactionPromptUI;
+    public GameObject llave;
+    public GameObject nota;
 
-    public GameObject inventarioUI;
-    public Item plantaItem;
-    public Inventory inventory;
+    [SerializeField] private string _prompt;
+    public string InteractionPrompt => _prompt;
+    public GameObject interactionPromptUI; 
+
+    public Dialogue firstDialogue;
+    public Dialogue secondDialogue;
+    public Dialogue thirdDialogue;
+    public Dialogue fourthDialogue;
 
     public GameObject continueButton;
     public GameObject optionsButton;
 
-    [SerializeField] private string _prompt;
-    public string InteractionPrompt => _prompt;
+    private bool isDialogueInProgress = false;
 
-    public Dialogue dialogue;
-    public DialogueManager dialogueManager;
+    public WaterManager waterManager;
+    private bool isWatered = false;
 
     public bool Interact(Interactor interactor)
     {
@@ -30,13 +34,13 @@ public class PlantaSetUpRoom : MonoBehaviour, IInteractable
         interactionPromptUI.SetActive(false);
 
         // Check if any sentence in the dialogue has different interactions
-        bool hasDifferentInteractions = CheckForDifferentInteractions(dialogue);
+        bool hasDifferentInteractions = CheckForDifferentInteractions(firstDialogue);
 
         // Show/hide buttons based on the result
         continueButton.SetActive(!hasDifferentInteractions);
         optionsButton.SetActive(hasDifferentInteractions);
 
-        TriggerDialogue(dialogue);
+        StartCoroutine(TriggerAndHandleDialogue(firstDialogue));
 
         return true;
     }
@@ -44,7 +48,6 @@ public class PlantaSetUpRoom : MonoBehaviour, IInteractable
     public void TriggerDialogue(Dialogue dialogue)
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-
     }
 
     private IEnumerator TriggerAndHandleDialogue(Dialogue dialogue)
@@ -56,7 +59,6 @@ public class PlantaSetUpRoom : MonoBehaviour, IInteractable
         {
             yield return null;
         }
-        
         interactionPromptUI.SetActive(true);
         isDialogueInProgress = false;
     }
@@ -74,15 +76,32 @@ public class PlantaSetUpRoom : MonoBehaviour, IInteractable
         return false;
     }
 
-    public void AgarrarPlanta()
+    public void Cantar()
     {
-        if (inventory != null)
+        if (isWatered)
         {
-            Item plantaItem = GetComponent<ItemObject>().itemReference;
-            inventory.AddItem(plantaItem);
+            StartCoroutine(TriggerAndHandleDialogue(secondDialogue));
+            llave.SetActive(true);
+            nota.SetActive(false);
+        }
 
-            inventarioUI.SetActive(true);
-            Destroy(gameObject);
+        else
+        {
+            StartCoroutine(TriggerAndHandleDialogue(thirdDialogue));
+        }
+
+    }
+
+    public void RegarPlanta()
+    {
+        if (isWatered)
+        {
+            StartCoroutine(TriggerAndHandleDialogue(fourthDialogue));
+        }
+        else
+        {
+            waterManager.WaterPlant();
+            isWatered = true;
         }
     }
 
