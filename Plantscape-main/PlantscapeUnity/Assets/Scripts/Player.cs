@@ -8,18 +8,12 @@ public class Player : MonoBehaviour
     private Animator animator;
 
     private Vector3 initialCameraPosition;
-    public AudioClip pasos;
-    public float minMoveThreshold = 0.1f;
-    private bool isMoving = false;
-    public AudioClip normalMoveSound;
-    public AudioClip floodedMoveSound;
-    private AudioSource audioSource;
+    //public AudioClip pasos;
+
     void Start()
     {
         animator = GetComponent<Animator>();
         initialCameraPosition = Camera.main.transform.position;
-        audioSource = GetComponent<AudioSource>();
-        audioSource.loop = false;
     }
 
     void Update()
@@ -47,24 +41,12 @@ public class Player : MonoBehaviour
                 moveDirection = 2.0f; // Up
             else if (moveVertical < 0)
                 moveDirection = 4.0f; // Down
-            if (movement.magnitude > minMoveThreshold)
+           // if (pasos != null)
             {
-                if (!isMoving)
-                {
-                    AudioManager.instance.PlaySoundEffect(pasos);
-                    isMoving = true;
-                }
-            }
-            else
-            {
-                isMoving = false;
+                //AudioManager.instance.PlaySoundEffect(pasos);
             }
         }
-        else
-        {
-            isMoving = false;
-        }
-        
+
         animator.SetFloat("MoveDirection", moveDirection);
 
         transform.Translate(movement * speed * Time.deltaTime, Space.World);

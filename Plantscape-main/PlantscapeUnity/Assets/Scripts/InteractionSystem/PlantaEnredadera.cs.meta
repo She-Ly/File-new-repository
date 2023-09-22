@@ -3,13 +3,7 @@ guid: a246b96af09b83c4096312a3f088a588
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - agujeroCollider: {instanceID: 0}
-  - continueButton: {instanceID: 0}
-  - optionsButton: {instanceID: 0}
-  - dialogueManager: {instanceID: 0}
-  - interactionPromptUI: {instanceID: 0}
-  - bajarEnredadera: {fileID: 8300000, guid: fb96570e165224a44b5b51292f35548e, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -3,10 +3,7 @@ guid: 63d31011788cd3e4d9c75305e42a8108
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - pasos: {fileID: 8300000, guid: 0cacc3f44fd6aba4086b8ecb0a2a35be, type: 3}
-  - normalMoveSound: {fileID: 8300000, guid: 0cacc3f44fd6aba4086b8ecb0a2a35be, type: 3}
-  - floodedMoveSound: {fileID: 8300000, guid: cf0baf3f062f33d44a845a25ec3d527e, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

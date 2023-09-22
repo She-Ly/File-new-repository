@@ -3,11 +3,7 @@ guid: 2607aeccb4b995346aef552afee52d3b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - interactionPromptUI: {instanceID: 0}
-  - continueButton: {instanceID: 0}
-  - optionsButton: {instanceID: 0}
-  - transportador: {fileID: 8300000, guid: dad9fbf4923945d4ba49850f15f6f29d, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

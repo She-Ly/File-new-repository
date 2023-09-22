@@ -8,9 +8,9 @@ public class Seed : MonoBehaviour, IInteractable
     public GameObject interactionPromptUI;
 
     public GameObject inventarioUI;
-    public GameObject semillaUI;
-    public GameObject semilla3D;
-    public bool hasSeed1 = false;
+    public Item seedItem;
+    public Inventory inventory;
+
 
     public GameObject continueButton;
     public GameObject optionsButton;
@@ -20,8 +20,6 @@ public class Seed : MonoBehaviour, IInteractable
 
     public Dialogue dialogue;
     public DialogueManager dialogueManager;
-
-    public GameObject nota;
 
     public bool Interact(Interactor interactor)
     {
@@ -78,14 +76,15 @@ public class Seed : MonoBehaviour, IInteractable
     }
 
     public void AgarrarSemilla()
-    { //maybe if collider con semilla agarrar todo
-        //referencia al inventario para saber que ese slot esta ocupado
-        semillaUI.SetActive(true);
-        inventarioUI.SetActive(true);
-        semilla3D.SetActive(false);
-        hasSeed1 = true;
+    {
+        if (inventory != null)
+        {
+            Item seedItem = GetComponent<ItemObject>().itemReference;
+            inventory.AddItem(seedItem);
 
-        nota.SetActive(true);
+            inventarioUI.SetActive(true);
+            Destroy(gameObject);
+        }
     }
 
     public void EsconderOpciones()

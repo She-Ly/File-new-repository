@@ -15,6 +15,7 @@ public class Transportador : MonoBehaviour, IInteractable
     public GameObject continueButton;
     public GameObject optionsButton;
     //que las dos opciones sean subir y bajar
+    public AudioClip transportador;
 
     public bool Interact(Interactor interactor)
     {
@@ -75,6 +76,9 @@ public class Transportador : MonoBehaviour, IInteractable
     public void Transportar()
     {
         //add teleporting logic here
-       
+        if (transportador != null)
+        {
+            AudioManager.instance.PlaySoundEffect(transportador);
+        }
     }
 }

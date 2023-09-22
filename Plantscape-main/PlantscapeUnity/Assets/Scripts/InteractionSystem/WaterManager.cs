@@ -11,8 +11,6 @@ public class WaterManager : MonoBehaviour
 
     public Dialogue dialogue; 
     public AudioClip emptyWaterSound; // archivo de sonido
-    public AudioClip addagua; // archivo de sonido
-
     private AudioSource audioSource;
 
     void Start()
@@ -48,10 +46,6 @@ public class WaterManager : MonoBehaviour
         // Fully refill the water supply
         waterCount = maxWaterCount;
 
-        if (emptyWaterSound != null)
-        {
-            audioSource.PlayOneShot(emptyWaterSound);
-        }
         // Update the UI to reflect the full water supply
         UpdateWaterUI();
     }

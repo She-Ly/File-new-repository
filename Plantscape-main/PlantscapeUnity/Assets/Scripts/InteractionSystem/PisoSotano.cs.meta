@@ -3,9 +3,7 @@ guid: b33cef6e427751b4e906487a6430341d
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - interactionPromptUI: {instanceID: 0}
-  - sotano: {fileID: 8300000, guid: 9a56b7884fc6c8349b5fbed3d5c544a7, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

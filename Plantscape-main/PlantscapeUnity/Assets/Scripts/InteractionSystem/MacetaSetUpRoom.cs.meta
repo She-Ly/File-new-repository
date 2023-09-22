@@ -3,13 +3,7 @@ guid: 1c9f837169b183041984d385a2f60de0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - seed: {instanceID: 0}
-  - newMaceta: {instanceID: 0}
-  - continueButton: {instanceID: 0}
-  - optionsButton: {instanceID: 0}
-  - interactionPromptUI: {instanceID: 0}
-  - sembrar: {fileID: 8300000, guid: ef8ab947e126b08428549536446ff501, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

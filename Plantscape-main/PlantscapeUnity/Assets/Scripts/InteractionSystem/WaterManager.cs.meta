@@ -3,9 +3,7 @@ guid: fce69e51a8b26e341813bbb4defc7215
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - emptyWaterSound: {fileID: 8300000, guid: 87340bc7c785982488034e4e2c8edfe4, type: 3}
-  - addagua: {fileID: 8300000, guid: dc701bdba67ba90419661e155f5d84a8, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -21,20 +21,4 @@ public class DoorSound : MonoBehaviour
             hasPlayedSound = true;
         }
     }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            if (!IsAnyOtherReasonToPlayMusic())
-            {
-                AudioManager.instance.PlayBackgroundMusic();
-                //AudioManager.instance.PauseMusic(contaminado);
-            }
-
-        }
-    }
-    private bool IsAnyOtherReasonToPlayMusic()
-    {
-        return false;
-    }
 }

@@ -3,9 +3,7 @@ guid: 4dac2d8a272e79245954480042d9228f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - invernadero: {fileID: 8300000, guid: dcdaf5a7af072384489183afacf8618a, type: 3}
-  - mauw: {fileID: 8300000, guid: 7521fdc68308b184685766b4624fd620, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

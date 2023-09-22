@@ -9,6 +9,7 @@ public class MacetaSetUpRoom : MonoBehaviour, IInteractable
 
     public Seed seed;
     public GameObject newMaceta;
+    public Inventory inventory;
 
     public GameObject continueButton;
     public GameObject optionsButton;
@@ -18,8 +19,7 @@ public class MacetaSetUpRoom : MonoBehaviour, IInteractable
     public Dialogue thirdDialogue;
 
     private bool isDialogueInProgress = false;
-    public GameObject interactionPromptUI;
-    public AudioClip sembrar;
+    public GameObject interactionPromptUI; 
 
     public bool Interact(Interactor interactor)
     {
@@ -75,22 +75,18 @@ public class MacetaSetUpRoom : MonoBehaviour, IInteractable
 
     public void Sembrar()
     {
-        if (seed.hasSeed1 == false)
-        {
-            EsconderOpciones();
-            StartCoroutine(TriggerAndHandleDialogue(secondDialogue));
-        }
-
-        else
+        if (inventory != null && inventory.HasItem(seed.seedItem))
         {
             newMaceta.SetActive(true);
+            Destroy(gameObject);
             StartCoroutine(TriggerAndHandleDialogue(thirdDialogue));
-            seed.hasSeed1 = false;
-            seed.semillaUI.SetActive(false);
-            if (sembrar != null)
-            {
-                AudioManager.instance.PlaySoundEffect(sembrar);
-            }
+            inventory.UseItem(seed.seedItem);
+        }
+        else
+        {
+            // Handle the case where the seed item is not in the inventory
+            EsconderOpciones();
+            StartCoroutine(TriggerAndHandleDialogue(secondDialogue));
         }
     }
 

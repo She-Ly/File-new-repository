@@ -13,7 +13,7 @@ public class PisoSotano : MonoBehaviour, IInteractable
     public Dialogue dialogue;
     public AudioClip sotano;
 
-   // Variable para rastrear si estás en el sótano
+    private bool isInsideBasement = false; // Variable para rastrear si estás en el sótano
 
 
     public bool Interact(Interactor interactor)
@@ -46,32 +46,19 @@ public class PisoSotano : MonoBehaviour, IInteractable
         interactionPromptUI.SetActive(true);
         isDialogueInProgress = false;
     }
-    private void OnTriggerEnter(Collider other)
+    public void SetInsideBasement(bool isInside)
     {
-        if (other.CompareTag("Player"))
+        isInsideBasement = isInside;
+
+        // Si estás dentro del sótano, reproduce la música en loop
+        if (isInsideBasement)
         {
-            // Reproduce el sonido de apertura de la puerta
-            if (sotano != null)
-            {
-                AudioManager.instance.PlayMusic(sotano);
-            }
+            AudioManager.instance.PlayMusic(sotano);
+        }
+        // Si no estás en el sótano, pausa la música
+        else
+        {
+            AudioManager.instance.PauseMusic();
         }
     }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            if (!IsAnyOtherReasonToPlayMusic())
-            {
-                AudioManager.instance.PlayBackgroundMusic();
-                //AudioManager.instance.PauseMusic(contaminado);
-            }
-
-        }
-    }
-    private bool IsAnyOtherReasonToPlayMusic()
-    {
-        return false;
-    }
-
 }

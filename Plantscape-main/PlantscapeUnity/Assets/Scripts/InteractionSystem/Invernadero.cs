@@ -14,8 +14,7 @@ public class Invernadero : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-           
-            if (firstInteraction)
+            if(firstInteraction)
             {
                 TriggerDialogue();
                 //sonido del gato
@@ -23,18 +22,17 @@ public class Invernadero : MonoBehaviour
                 {
                     AudioManager.instance.PlaySoundEffect(mauw);
                 }
-                
-                // Reproduce la música de fondo del invernadero
 
+                // Reproduce la música de fondo del invernadero
+                if (invernadero != null)
+                {
+                    AudioManager.instance.PlayMusic(invernadero);
+                }
                 firstInteraction = false;
             }
             else
             {
                 Destroy(gameObject);
-            }
-            if (invernadero != null)
-            {
-                AudioManager.instance.PlayMusic(invernadero);
             }
         }
     }
@@ -42,21 +40,5 @@ public class Invernadero : MonoBehaviour
     public void TriggerDialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            if (!IsAnyOtherReasonToPlayMusic())
-            {
-                AudioManager.instance.PlayBackgroundMusic();
-                //AudioManager.instance.PauseMusic(contaminado);
-            }
-
-        }
-    }
-    private bool IsAnyOtherReasonToPlayMusic()
-    {
-        return false;
     }
 }
