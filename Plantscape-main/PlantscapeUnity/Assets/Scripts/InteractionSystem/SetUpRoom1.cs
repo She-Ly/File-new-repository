@@ -2,39 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorSound : MonoBehaviour
+public class SetUpRoom1 : MonoBehaviour
 {
-    // Agrega un campo para el efecto de sonido de apertura en el Inspector
-    public AudioClip abrirPuerta;
+    public AudioClip Room;
+    private bool baseMusicPlaying;
 
-    private bool hasPlayedSound = false;
-
+    // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !hasPlayedSound)
+        if (other.CompareTag("Player"))
         {
-            // Reproduce el sonido de apertura de la puerta
-            if (abrirPuerta != null)
+            // Pausar la música base si está reproduciéndose
+
+            // Reproducir el audio de la sala
+            if (Room != null)
             {
-                AudioManager.instance.PlaySoundEffect(abrirPuerta);
+                AudioManager.instance.PlayMusic(Room);
             }
-            hasPlayedSound = true;
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            // Si la música base estaba reproduciéndose, reanudarla
             if (!IsAnyOtherReasonToPlayMusic())
             {
                 AudioManager.instance.PlayBackgroundMusic();
                 //AudioManager.instance.PauseMusic(contaminado);
             }
-
         }
+        
     }
+
     private bool IsAnyOtherReasonToPlayMusic()
     {
         return false;
     }
 }
+
+
+

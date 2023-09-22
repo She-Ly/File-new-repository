@@ -7,7 +7,7 @@ public class SetUpRoomNote : MonoBehaviour, IInteractable
     [SerializeField] private string _prompt;
     public string InteractionPrompt => _prompt;
 
-    //public GameObject llave;
+    public GameObject llave;
     public GameObject nota2D;
 
     private bool firstInteraction = true;
@@ -15,8 +15,8 @@ public class SetUpRoomNote : MonoBehaviour, IInteractable
     private bool isDialogueInProgress = false;
     public GameObject interactionPromptUI;
 
-    public AudioClip sonidoTriunfal; // Agrega tu mï¿½sica triunfal aquï¿½
-    public AudioClip setRoom; // Agrega tu mï¿½sica en loop aquï¿½
+    public AudioClip sonidoTriunfal; // Agrega tu música triunfal aquí
+    public AudioClip setRoom; // Agrega tu música en loop aquí
     private AudioSource audioSource;
 
     
@@ -30,19 +30,19 @@ public class SetUpRoomNote : MonoBehaviour, IInteractable
         interactionPromptUI.SetActive(false);
 
         nota2D.SetActive(true);
-        //llave.SetActive(true);
+        llave.SetActive(true);
         //agregar musica triunfal cuando se cierre la nota
 
         // Reproduce el sonido triunfal
         AudioManager.instance.PlaySoundEffect(sonidoTriunfal);
 
-        // Agrega la mï¿½sica en loop para la habitaciï¿½n
+        // Agrega la música en loop para la habitación
         AudioManager.instance.PlayMusic(setRoom);
         return true;
     }
     public void ExitRoom()
     {
-        // Detiene la mï¿½sica en loop
+        // Detiene la música en loop
         AudioManager.instance.StopMusic();
     }
 

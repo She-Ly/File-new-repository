@@ -8,8 +8,9 @@ public class PlantaSetUpRoom : MonoBehaviour, IInteractable
     public GameObject interactionPromptUI;
 
     public GameObject inventarioUI;
-    public Item plantaItem;
-    public Inventory inventory;
+    public GameObject plantaUI;
+    public GameObject planta3D;
+    public bool hasPlantavida = false;
 
     public GameObject continueButton;
     public GameObject optionsButton;
@@ -19,7 +20,10 @@ public class PlantaSetUpRoom : MonoBehaviour, IInteractable
 
     public Dialogue dialogue;
     public DialogueManager dialogueManager;
+    public AudioClip agarrarPlanta;
 
+    
+ 
     public bool Interact(Interactor interactor)
     {
         if (isDialogueInProgress)
@@ -76,14 +80,16 @@ public class PlantaSetUpRoom : MonoBehaviour, IInteractable
 
     public void AgarrarPlanta()
     {
-        if (inventory != null)
+        if (agarrarPlanta != null)
         {
-            Item plantaItem = GetComponent<ItemObject>().itemReference;
-            inventory.AddItem(plantaItem);
-
-            inventarioUI.SetActive(true);
-            Destroy(gameObject);
+            AudioManager.instance.PlaySoundEffect(agarrarPlanta);
         }
+        //referencia al inventario para saber que ese slot esta ocupado
+        plantaUI.SetActive(true);
+        inventarioUI.SetActive(true);
+        planta3D.SetActive(false);
+
+        hasPlantavida = true;
     }
 
     public void EsconderOpciones()
@@ -91,5 +97,6 @@ public class PlantaSetUpRoom : MonoBehaviour, IInteractable
         continueButton.SetActive(true);
         optionsButton.SetActive(false);
     }
+   
 
 }

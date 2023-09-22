@@ -1,11 +1,17 @@
 fileFormatVersion: 2
-guid: 1c9f837169b183041984d385a2f60de0
+guid: 2c6ffe163d0fd634cbf1b987c13584ab
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
   - seed: {instanceID: 0}
-  - newMaceta: {instanceID: 0}
+  - key: {instanceID: 0}
+  - planta: {instanceID: 0}
+  - seedUI: {instanceID: 0}
+  - keyUI: {instanceID: 0}
+  - inventarioSelect: {instanceID: 0}
+  - newSlot: {instanceID: 0}
+  - oldSlot: {instanceID: 0}
   - continueButton: {instanceID: 0}
   - optionsButton: {instanceID: 0}
   - interactionPromptUI: {instanceID: 0}

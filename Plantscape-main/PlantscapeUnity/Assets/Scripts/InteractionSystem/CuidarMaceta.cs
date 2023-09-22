@@ -16,10 +16,12 @@ public class CuidarMaceta : MonoBehaviour, IInteractable
 
     private bool isDialogueInProgress = false;
 
+    public GameObject plantaVieja;
     public GameObject plantaNueva;
     public WaterManager waterManager;
+    public AudioClip agarrarPlanta;
+    public AudioClip regarPlanta;
     private bool isWatered = false;
-    private Coroutine wateringCoroutine;
 
     public bool Interact(Interactor interactor)
     {
@@ -37,14 +39,14 @@ public class CuidarMaceta : MonoBehaviour, IInteractable
         continueButton.SetActive(!hasDifferentInteractions);
         optionsButton.SetActive(hasDifferentInteractions);
 
-        if (isWatered == false)
-        {
-            StartCoroutine(TriggerAndHandleDialogue(firstDialogue));
-        }
-        else
+        if (isWatered)
         {
             EsconderOpciones();
             StartCoroutine(TriggerAndHandleDialogue(secondDialogue));
+        }
+        else
+        {
+            StartCoroutine(TriggerAndHandleDialogue(firstDialogue));
         }
 
         return true;
@@ -90,25 +92,23 @@ public class CuidarMaceta : MonoBehaviour, IInteractable
     public void RegarPlanta()
     {
         waterManager.WaterPlant();
-        if (waterManager.waterCount == 2 || waterManager.waterCount == 1)
+        isWatered = true;
+        if (regarPlanta != null)
         {
-            isWatered = true;
-
-            // If a previous coroutine is running, stop it
-            if (wateringCoroutine != null)
-            {
-                StopCoroutine(wateringCoroutine);
-            }
-
-            // Start a new coroutine that waits for 6 seconds
-            wateringCoroutine = StartCoroutine(WaitForWateringEffect());
+            AudioManager.instance.PlaySoundEffect(regarPlanta);
         }
+
     }
 
-    private IEnumerator WaitForWateringEffect()
+    public void AgarrarPlanta()
     {
-        yield return new WaitForSeconds(6f);
+        Debug.Log("Has equipado una plantula. Ahora debes encontrarle un habitat adecuado");
+        Destroy(plantaVieja);
         plantaNueva.SetActive(true);
-        Destroy(gameObject);
+        if (agarrarPlanta != null)
+        {
+            AudioManager.instance.PlaySoundEffect(agarrarPlanta);
+        }
+        //agregar a UI con el manager de inventario ig
     }
 }

@@ -7,6 +7,9 @@ public class Teleport : MonoBehaviour
     public Transform teleportDestination; // Arrastra el GameObject de destino aquí en el Inspector
     public float teleportDelay = 2f; // Tiempo de espera antes de la teletransportación
     private bool canTeleport = true;
+    public AudioClip transportador;
+
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,6 +18,10 @@ public class Teleport : MonoBehaviour
         {
             // Teletransporta al jugador al destino después del tiempo de espera configurado
             Invoke("TeleportPlayerDelayed", teleportDelay);
+        }
+        if (transportador != null)
+        {
+            AudioManager.instance.PlaySoundEffect(transportador);
         }
     }
 
@@ -35,7 +42,7 @@ public class Teleport : MonoBehaviour
         {
             player.transform.position = teleportDestination.position;
         }
-
+        
         // Reinicia el estado de teletransportación
         canTeleport = true;
     }

@@ -8,17 +8,23 @@ public class Key : MonoBehaviour, IInteractable
     public string InteractionPrompt => _prompt;
 
     public GameObject objetoLlave;
-    public Item keyItem;
-    public Inventory inventory;
+    public GameObject llaveUI;
+
+    public bool hasKey = false;
 
     public Dialogue dialogue;
 
+    public AudioClip llave;
     public bool Interact(Interactor interactor)
     {
-        Destroy(gameObject);
-        Item keyItem = GetComponent<ItemObject>().itemReference;
-        inventory.AddItem(keyItem);
+        hasKey = true;
+        objetoLlave.SetActive(false);
+        llaveUI.SetActive(true);
         TriggerDialogue();
+        if (llave != null)
+        {
+            AudioManager.instance.PlaySoundEffect(llave);
+        }
         return true;
     }
 

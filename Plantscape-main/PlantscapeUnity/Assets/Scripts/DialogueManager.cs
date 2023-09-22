@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
 
     public bool IsDialogueActive = false;
     public bool lastSentence = false;
+    public AudioClip dialogos;
 
     void Start()
     {
@@ -26,9 +27,9 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("IsOpen", true);
 
         IsDialogueActive = true;
-        if (dialogoSonido != null)
+        if (dialogos != null)
         {
-            AudioManager.instance.PlaySoundEffect(dialogoSonido);
+            AudioManager.instance.PlaySoundEffect(dialogos);
         }
         sentences.Clear();
 
@@ -52,9 +53,9 @@ public class DialogueManager : MonoBehaviour
         {
             lastSentence = true;
         }
-        if (dialogoSonido != null)
+        if (dialogos != null)
         {
-            AudioManager.instance.PlaySoundEffect(dialogoSonido);
+            AudioManager.instance.PlaySoundEffect(dialogos);
         }
         string sentence = sentences.Dequeue();
         StopAllCoroutines();

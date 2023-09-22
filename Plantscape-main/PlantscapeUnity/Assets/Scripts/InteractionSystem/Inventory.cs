@@ -5,8 +5,6 @@ using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour
 {
-    public static Inventory current;
-    
     // Maximum number of inventory slots
     public int maxSlots = 3;
 
@@ -19,9 +17,9 @@ public class Inventory : MonoBehaviour
     // Reference to the item you want to use
     private Item selectedItem;
 
-    public Dialogue dialogue;
-
     // Function to add an item to the inventory
+    public AudioClip itemASelec; // Sonido al seleccionar un elemento
+    public AudioClip itemSeleccionado;
     public void AddItem(Item item)
     {
         if (items.Count < maxSlots)
@@ -31,50 +29,37 @@ public class Inventory : MonoBehaviour
         }
         else
         {
-            TriggerDialogue();
+            Debug.Log("Inventory is full!");
         }
     }
 
+    // Function to use the selected item
     public void UseSelectedItem()
     {
         if (selectedItem != null)
         {
             // Use the selected item (implement item-specific logic here)
-
-            // Remove the used item from the inventory
-            if (HasItem(selectedItem))
+            if (itemSeleccionado != null)
             {
-                items.Remove(selectedItem);
-                selectedItem = null;
-
-                // Update the UI
-                UpdateInventoryUI();
+                AudioManager.instance.PlaySoundEffect(itemSeleccionado);
             }
-        }
-    }
-
-    // Function to use a specific item
-    public void UseItem(Item item)
-    {
-        if (HasItem(item))
-        {
-            // Use the specific item (implement item-specific logic here)
-            items.Remove(item);
+            // Remove the used item from the inventory
+            items.Remove(selectedItem);
+            selectedItem = null;
 
             // Update the UI
             UpdateInventoryUI();
         }
     }
 
-    public bool HasItem(Item item)
-    {
-        return items.Contains(item);
-    }
-
     // Function to select an item for use
     public void SelectItem(Item item)
     {
         selectedItem = item;
+        if (itemASelec != null)
+        {
+            AudioManager.instance.PlaySoundEffect(itemASelec);
+        }
     }
 
     // Update the UI to reflect the current inventory state
@@ -95,10 +80,5 @@ public class Inventory : MonoBehaviour
                 inventorySlots[i].interactable = false; // Make the slot unclickable
             }
         }
-    }
-
-    public void TriggerDialogue()
-    {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 }

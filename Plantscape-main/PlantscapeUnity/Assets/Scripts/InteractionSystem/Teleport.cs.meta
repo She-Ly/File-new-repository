@@ -3,7 +3,9 @@ guid: 9bf6f5190084feb44bd61dbaaa1d3205
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - teleportDestination: {instanceID: 0}
+  - transportador: {fileID: 8300000, guid: dad9fbf4923945d4ba49850f15f6f29d, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -13,6 +13,7 @@ public class WaterBottle : MonoBehaviour, IInteractable
     public Dialogue firstDialogue;
     public Dialogue secondDialogue;
     public GameObject botella;
+    public AudioClip interactSound;
 
     public GameObject waterUI;
 
@@ -27,6 +28,10 @@ public class WaterBottle : MonoBehaviour, IInteractable
         }
 
         interactionPromptUI.SetActive(false);
+        if (interactSound != null)
+        {
+            AudioManager.instance.PlaySoundEffect(interactSound);
+        }
 
         if (firstInteraction)
         {
@@ -46,7 +51,7 @@ public class WaterBottle : MonoBehaviour, IInteractable
     public void TriggerDialogue(Dialogue dialogue)
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-        Destroy(botella);
+        botella.SetActive(false);
     }
 
     private IEnumerator TriggerAndHandleDialogue(Dialogue dialogue)

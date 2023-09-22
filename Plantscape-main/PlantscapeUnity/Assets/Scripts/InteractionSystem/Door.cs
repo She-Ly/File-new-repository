@@ -14,7 +14,6 @@ public class Door : MonoBehaviour, IInteractable
     public Dialogue secondDialogue;
 
     public Key key;
-    public Inventory inventory;
     public GameObject puerta;
 
     void Start()
@@ -29,11 +28,11 @@ public class Door : MonoBehaviour, IInteractable
             return false;
         }
 
-        if (inventory != null && inventory.HasItem(key.keyItem))
+        // Check if the player has the key
+        if (key.hasKey)
         {
             StartCoroutine(TriggerAndHandleDialogue(secondDialogue));
-            inventory.UseItem(key.keyItem);
-            puerta.SetActive(false);
+            // Play the door opening animation
             doorAnimation.Play("SlideDoor");
         }
         else
@@ -44,6 +43,7 @@ public class Door : MonoBehaviour, IInteractable
         return true;
     }
 
+    // Método que se llamará desde el evento de animación de apertura
     public void StartClosingAnimation()
     {
         // Play the door closing animation
@@ -56,6 +56,7 @@ public class Door : MonoBehaviour, IInteractable
         yield return new WaitForSeconds(3);
         doorAnimation.Play("CloseDoor");
     }
+
 
     public void TriggerDialogue(Dialogue dialogue)
     {
