@@ -3,7 +3,11 @@ guid: e9988d4175f9d8044ad05b4ddf439f99
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - waterManager: {instanceID: 0}
+  - Inundado: {fileID: 8300000, guid: 55d9fb183e8d2eb44b8bbb02d12fee82, type: 3}
+  - splash: {fileID: 8300000, guid: 03e03913768a76142957233f3c564905, type: 3}
+  - AudioSource: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

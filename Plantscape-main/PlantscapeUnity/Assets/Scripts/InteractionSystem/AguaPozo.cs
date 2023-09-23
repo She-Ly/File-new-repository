@@ -7,6 +7,14 @@ public class AguaPozo : MonoBehaviour
     public Dialogue dialogue;
 
     public WaterManager waterManager;
+    public AudioClip Inundado;
+    public AudioClip splash;
+    public AudioSource AudioSource;
+
+    void Start()
+    {
+        AudioSource = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,6 +22,15 @@ public class AguaPozo : MonoBehaviour
         {
             TriggerDialogue();
             waterManager.RefillWater();
+
+            if (Inundado != null)
+            {
+                AudioManager.instance.PlayMusic(Inundado);
+            }
+            if (splash != null)
+            {
+                AudioManager.instance.PlaySoundEffect(splash);
+            }
         }
     }
 
@@ -22,4 +39,21 @@ public class AguaPozo : MonoBehaviour
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (!IsAnyOtherReasonToPlayMusic())
+            {
+                AudioManager.instance.PlayBackgroundMusic();
+                //AudioManager.instance.PauseMusic(contaminado);
+            }
+
+        }
+    }
+    private bool IsAnyOtherReasonToPlayMusic()
+    {
+        return false;
+    }
 }
+

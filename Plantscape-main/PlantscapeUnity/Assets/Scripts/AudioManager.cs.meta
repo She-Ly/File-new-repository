@@ -3,7 +3,10 @@ guid: 2be7cdcf5b654cc4a90facaba57f0441
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - soundEffectSource: {instanceID: 0}
+  - musicSource: {instanceID: 0}
+  - backgroundMusic: {fileID: 8300000, guid: ac5a37ce6ef4eb740b95428e5996cffe, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

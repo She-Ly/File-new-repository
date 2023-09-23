@@ -20,6 +20,8 @@ public class CuidarMaceta : MonoBehaviour, IInteractable
     public WaterManager waterManager;
     private bool isWatered = false;
     private Coroutine wateringCoroutine;
+    public AudioClip agarrarPlanta;
+    public AudioClip regarPlanta;
 
     public bool Interact(Interactor interactor)
     {
@@ -102,6 +104,10 @@ public class CuidarMaceta : MonoBehaviour, IInteractable
 
             // Start a new coroutine that waits for 6 seconds
             wateringCoroutine = StartCoroutine(WaitForWateringEffect());
+        }
+        if (regarPlanta != null)
+        {
+            AudioManager.instance.PlaySoundEffect(regarPlanta);
         }
     }
 

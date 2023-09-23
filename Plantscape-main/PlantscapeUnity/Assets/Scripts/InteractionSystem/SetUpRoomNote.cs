@@ -16,8 +16,7 @@ public class SetUpRoomNote : MonoBehaviour, IInteractable
     public GameObject interactionPromptUI;
 
     public AudioClip sonidoTriunfal; // Agrega tu m�sica triunfal aqu�
-    public AudioClip setRoom; // Agrega tu m�sica en loop aqu�
-    private AudioSource audioSource;
+    
 
     
     public bool Interact(Interactor interactor)
@@ -32,19 +31,15 @@ public class SetUpRoomNote : MonoBehaviour, IInteractable
         nota2D.SetActive(true);
         //llave.SetActive(true);
         //agregar musica triunfal cuando se cierre la nota
-
+        if (sonidoTriunfal != null)
+        {
+            AudioManager.instance.PlaySoundEffect(sonidoTriunfal);
+        }
         // Reproduce el sonido triunfal
-        AudioManager.instance.PlaySoundEffect(sonidoTriunfal);
 
-        // Agrega la m�sica en loop para la habitaci�n
-        AudioManager.instance.PlayMusic(setRoom);
         return true;
     }
-    public void ExitRoom()
-    {
-        // Detiene la m�sica en loop
-        AudioManager.instance.StopMusic();
-    }
+   
 
     public void TriggerDialogue()
     {

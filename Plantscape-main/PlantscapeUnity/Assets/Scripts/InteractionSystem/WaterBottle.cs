@@ -16,6 +16,7 @@ public class WaterBottle : MonoBehaviour, IInteractable
 
     public GameObject waterUI;
 
+
     public GameObject interactionPromptUI; 
     public string InteractionPrompt => _prompt;
 

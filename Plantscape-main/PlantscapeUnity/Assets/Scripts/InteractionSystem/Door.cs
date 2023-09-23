@@ -17,6 +17,7 @@ public class Door : MonoBehaviour, IInteractable
     public Inventory inventory;
     public GameObject puerta;
 
+
     void Start()
     {
         doorAnimation = puerta.GetComponent<Animator>();

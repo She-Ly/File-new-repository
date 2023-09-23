@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -862,6 +862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportDestination: {fileID: 1423125180}
   teleportDelay: 2
+  transportador: {fileID: 0}
 --- !u!65 &37508816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3506,6 +3507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportDestination: {fileID: 493275483}
   teleportDelay: 2
+  transportador: {fileID: 0}
 --- !u!65 &469709141
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3679,6 +3681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportDestination: {fileID: 469709139}
   teleportDelay: 4
+  transportador: {fileID: 8300000, guid: dad9fbf4923945d4ba49850f15f6f29d, type: 3}
 --- !u!65 &493275485
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3971,7 +3974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 427593723}
   animator: {fileID: 496020036}
-  dialogoSonido: {fileID: 0}
+  dialogoSonido: {fileID: 8300000, guid: daf98be3ee0dbc946868f1e84999411c, type: 3}
   IsDialogueActive: 0
   lastSentence: 0
 --- !u!4 &526952247
@@ -4391,6 +4394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportDestination: {fileID: 3541367000540536498}
   teleportDelay: 4
+  transportador: {fileID: 8300000, guid: dad9fbf4923945d4ba49850f15f6f29d, type: 3}
 --- !u!1 &690486446
 GameObject:
   m_ObjectHideFlags: 0
@@ -4517,6 +4521,7 @@ MonoBehaviour:
   inventory: {fileID: 2121235721}
   continueButton: {fileID: 1179447991}
   optionsButton: {fileID: 1455537679}
+  agarrarPlanta: {fileID: 8300000, guid: 9a8358f20b10e45449cd3e78a020d296, type: 3}
   _prompt: Planta
   dialogue:
     sentences:
@@ -4609,7 +4614,7 @@ SpriteRenderer:
   m_Size: {x: 3.2, y: 3.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &694005392
@@ -4947,6 +4952,7 @@ GameObject:
   - component: {fileID: 708533658}
   - component: {fileID: 708533657}
   - component: {fileID: 708533661}
+  - component: {fileID: 708533662}
   m_Layer: 0
   m_Name: TriggerPuertaComidaGato
   m_TagString: Untagged
@@ -5053,6 +5059,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8555814950660709538}
+--- !u!114 &708533662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708533656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb7da55e895409468b6ea48bc07f7d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abrirPuerta: {fileID: 8300000, guid: 59aad53a2b72fe247a7bce266c331af3, type: 3}
 --- !u!1 &717108913
 GameObject:
   m_ObjectHideFlags: 0
@@ -7375,6 +7394,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 950839991}
+  - component: {fileID: 950839993}
+  - component: {fileID: 950839992}
   m_Layer: 0
   m_Name: InteractuablesSetUpRoom
   m_TagString: Untagged
@@ -7405,6 +7426,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &950839992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950839990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9c08710f836c04cb953d827ef99d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setRoom: {fileID: 8300000, guid: e622c35c4bd899d42a138578aff3a130, type: 3}
+--- !u!65 &950839993
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950839990}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.29507065, z: 0.9133387}
+  m_Center: {x: 0, y: 0.18095231, z: -0.04333064}
 --- !u!1 &953876203
 GameObject:
   m_ObjectHideFlags: 0
@@ -7798,6 +7853,7 @@ GameObject:
   - component: {fileID: 983172337}
   - component: {fileID: 983172336}
   - component: {fileID: 983172335}
+  - component: {fileID: 983172340}
   m_Layer: 0
   m_Name: TriggerPuertaOscuro
   m_TagString: Untagged
@@ -7904,6 +7960,19 @@ Transform:
   m_Father: {fileID: 2035075043}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &983172340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983172334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb7da55e895409468b6ea48bc07f7d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abrirPuerta: {fileID: 8300000, guid: 59aad53a2b72fe247a7bce266c331af3, type: 3}
 --- !u!1 &1019703776
 GameObject:
   m_ObjectHideFlags: 0
@@ -10601,6 +10670,9 @@ MonoBehaviour:
     - Has llenado tu botella de agua.
     hasDifferentInteractions: 00
   waterManager: {fileID: 2121235720}
+  Inundado: {fileID: 8300000, guid: 55d9fb183e8d2eb44b8bbb02d12fee82, type: 3}
+  splash: {fileID: 8300000, guid: 03e03913768a76142957233f3c564905, type: 3}
+  AudioSource: {fileID: 0}
 --- !u!1 &1224737720
 GameObject:
   m_ObjectHideFlags: 0
@@ -11496,6 +11568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80403849101348a4dbb4514dfbd1efd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yei: {fileID: 8300000, guid: b77c5af1338af31498c78155e76ff588, type: 3}
   panelFinal: {fileID: 935028932}
 --- !u!65 &1314183791
 BoxCollider:
@@ -12367,6 +12440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportDestination: {fileID: 37508814}
   teleportDelay: 4
+  transportador: {fileID: 8300000, guid: dad9fbf4923945d4ba49850f15f6f29d, type: 3}
 --- !u!65 &1423125182
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12903,6 +12977,7 @@ GameObject:
   - component: {fileID: 1505215204}
   - component: {fileID: 1505215203}
   - component: {fileID: 1505215202}
+  - component: {fileID: 1505215205}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -12922,7 +12997,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.577
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -13018,7 +13093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be7cdcf5b654cc4a90facaba57f0441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundEffectSource: {fileID: 1505215202}
+  soundEffectSource: {fileID: 1505215205}
   musicSource: {fileID: 1505215202}
   backgroundMusic: {fileID: 8300000, guid: ac5a37ce6ef4eb740b95428e5996cffe, type: 3}
 --- !u!4 &1505215204
@@ -13036,6 +13111,102 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1505215205
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505215201}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.463
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1510196323
 GameObject:
   m_ObjectHideFlags: 0
@@ -13573,8 +13744,7 @@ MonoBehaviour:
     - "Parece que hab\xEDa algo debajo de la nota."
     hasDifferentInteractions: 
   interactionPromptUI: {fileID: 1108659863}
-  sonidoTriunfal: {fileID: 8300000, guid: 816be796c68d82f46844625ef21d1d89, type: 3}
-  setRoom: {fileID: 8300000, guid: ac5a37ce6ef4eb740b95428e5996cffe, type: 3}
+  sonidoTriunfal: {fileID: 8300000, guid: 2c6afb000c2d6364fa23393d2278a657, type: 3}
 --- !u!65 &1550994832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14433,6 +14603,7 @@ GameObject:
   - component: {fileID: 1676991635}
   - component: {fileID: 1676991634}
   - component: {fileID: 1676991638}
+  - component: {fileID: 1676991639}
   m_Layer: 0
   m_Name: TriggerPuertaGenerador
   m_TagString: Untagged
@@ -14539,6 +14710,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 9129268168137496621}
+--- !u!114 &1676991639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676991631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb7da55e895409468b6ea48bc07f7d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abrirPuerta: {fileID: 8300000, guid: 59aad53a2b72fe247a7bce266c331af3, type: 3}
 --- !u!65 &1692946994
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15563,6 +15747,8 @@ MonoBehaviour:
   optionsButton: {fileID: 717108913}
   plantaNueva: {fileID: 38999155}
   waterManager: {fileID: 2121235720}
+  agarrarPlanta: {fileID: 0}
+  regarPlanta: {fileID: 0}
 --- !u!65 &1883979203
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15759,6 +15945,7 @@ GameObject:
   - component: {fileID: 1926962335}
   - component: {fileID: 1926962334}
   - component: {fileID: 1926962333}
+  - component: {fileID: 1926962338}
   m_Layer: 0
   m_Name: TriggerPuertaCaliente
   m_TagString: Untagged
@@ -15865,6 +16052,19 @@ Transform:
   m_Father: {fileID: 2035075043}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1926962338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926962332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb7da55e895409468b6ea48bc07f7d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abrirPuerta: {fileID: 8300000, guid: 59aad53a2b72fe247a7bce266c331af3, type: 3}
 --- !u!1 &1927752131
 GameObject:
   m_ObjectHideFlags: 0
@@ -17531,6 +17731,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  pasos: {fileID: 8300000, guid: 0cacc3f44fd6aba4086b8ecb0a2a35be, type: 3}
+  minMoveThreshold: 0.1
 --- !u!54 &2121235717
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17614,6 +17816,7 @@ MonoBehaviour:
     - No tienes suficiente agua.
     hasDifferentInteractions: 00
   emptyWaterSound: {fileID: 8300000, guid: 87340bc7c785982488034e4e2c8edfe4, type: 3}
+  addAgua: {fileID: 8300000, guid: 71387282a68bea245a24e300f15d6246, type: 3}
 --- !u!114 &2121235721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17634,6 +17837,8 @@ MonoBehaviour:
   dialogue:
     sentences: []
     hasDifferentInteractions: 
+  itemASelec: {fileID: 8300000, guid: f3b2d0cec33d44b4287263b543f453bf, type: 3}
+  itemSeleccionado: {fileID: 8300000, guid: 8d9841b50e33e9c45a862898f7ff61aa, type: 3}
 --- !u!1 &2123435372
 GameObject:
   m_ObjectHideFlags: 0
@@ -17717,6 +17922,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2130245878}
+  - component: {fileID: 2130245879}
+  - component: {fileID: 2130245880}
   m_Layer: 0
   m_Name: InteractuablesInvernadero
   m_TagString: Untagged
@@ -17732,13 +17939,51 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130245877}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9119319, y: 1.8280556, z: 0.30227223}
+  m_LocalPosition: {x: -1.44, y: 2.15, z: -1.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2130245879
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130245877}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.8214294, y: 0.26313293, z: 0.76438427}
+  m_Center: {x: 0.8955063, y: -0.27961963, z: 0.54656935}
+--- !u!114 &2130245880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130245877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dac2d8a272e79245954480042d9228f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences: []
+    hasDifferentInteractions: 
+  invernadero: {fileID: 8300000, guid: dcdaf5a7af072384489183afacf8618a, type: 3}
+  mauw: {fileID: 8300000, guid: 7521fdc68308b184685766b4624fd620, type: 3}
 --- !u!33 &25436675116002800
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -28324,6 +28569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportDestination: {fileID: 652845971}
   teleportDelay: 3
+  transportador: {fileID: 0}
 --- !u!23 &3554361253703557457
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42433,6 +42679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportDestination: {fileID: 5110104947536319572}
   teleportDelay: 2
+  transportador: {fileID: 8300000, guid: dad9fbf4923945d4ba49850f15f6f29d, type: 3}
 --- !u!1 &7805644895886261214
 GameObject:
   m_ObjectHideFlags: 0
@@ -43187,6 +43434,7 @@ GameObject:
   - component: {fileID: 857401128}
   - component: {fileID: 8672619854355286416}
   - component: {fileID: 8672619854355286417}
+  - component: {fileID: 8672619854355286418}
   m_Layer: 6
   m_Name: Puerta_SetUpRoom
   m_TagString: Untagged
@@ -44074,6 +44322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportDestination: {fileID: 2956317657346935045}
   teleportDelay: 2
+  transportador: {fileID: 0}
 --- !u!33 &8173782325652136847
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -45978,6 +46227,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.043649554, y: 0.34720284, z: 0.595456}
   m_Center: {x: -0.0000000016589183, y: 0.000000007450581, z: 0}
+--- !u!114 &8672619854355286418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8001146462070911879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb7da55e895409468b6ea48bc07f7d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abrirPuerta: {fileID: 8300000, guid: 59aad53a2b72fe247a7bce266c331af3, type: 3}
 --- !u!4 &8684459221804410394
 Transform:
   m_ObjectHideFlags: 0

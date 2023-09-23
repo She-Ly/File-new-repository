@@ -13,6 +13,9 @@ public class PlantaSetUpRoom : MonoBehaviour, IInteractable
 
     public GameObject continueButton;
     public GameObject optionsButton;
+    public AudioClip agarrarPlanta;
+
+
 
     [SerializeField] private string _prompt;
     public string InteractionPrompt => _prompt;
@@ -83,6 +86,10 @@ public class PlantaSetUpRoom : MonoBehaviour, IInteractable
 
             inventarioUI.SetActive(true);
             Destroy(gameObject);
+            if (agarrarPlanta != null)
+            {
+                AudioManager.instance.PlaySoundEffect(agarrarPlanta);
+            }
         }
     }
 

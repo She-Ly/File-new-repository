@@ -20,6 +20,8 @@ public class Inventory : MonoBehaviour
     private Item selectedItem;
 
     public Dialogue dialogue;
+    public AudioClip itemASelec; // Sonido al seleccionar un elemento
+    public AudioClip itemSeleccionado;
 
     // Function to add an item to the inventory
     public void AddItem(Item item)
@@ -40,7 +42,10 @@ public class Inventory : MonoBehaviour
         if (selectedItem != null)
         {
             // Use the selected item (implement item-specific logic here)
-
+            if (itemASelec != null)
+            {
+                AudioManager.instance.PlaySoundEffect(itemASelec);
+            }
             // Remove the used item from the inventory
             if (HasItem(selectedItem))
             {
@@ -49,7 +54,12 @@ public class Inventory : MonoBehaviour
 
                 // Update the UI
                 UpdateInventoryUI();
+                if (itemSeleccionado != null)
+                {
+                    AudioManager.instance.PlaySoundEffect(itemSeleccionado);
+                }
             }
+
         }
     }
 

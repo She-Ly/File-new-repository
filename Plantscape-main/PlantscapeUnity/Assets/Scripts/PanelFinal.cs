@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
+
 public class PanelFinal : MonoBehaviour
 
 {
+    public AudioClip yei;
+
     public GameObject panelFinal;
     // Start is called before the first frame update
     void Start()
@@ -24,8 +27,28 @@ public class PanelFinal : MonoBehaviour
 
         {
             panelFinal.SetActive(true);
-         
+            if (yei != null)
+            {
+                AudioManager.instance.PlayMusic(yei);
+            }
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            // Add any necessary actions when the player exits the trigger zone
+            
+            if (!IsAnyOtherReasonToPlayMusic())
+            {
+                AudioManager.instance.PlayBasemusic();
+                //AudioManager.instance.PauseMusic(contaminado);
+            }
 
+        }
+    }
+    private bool IsAnyOtherReasonToPlayMusic()
+    {
+        return false;
+    }
 }

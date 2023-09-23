@@ -6,14 +6,19 @@ public class Player : MonoBehaviour
 {
     public float speed = 5f;
     private Animator animator;
-
+    public AudioClip pasos;
     private Vector3 initialCameraPosition;
     //public AudioClip pasos;
+    private bool isMoving = false;
+    public float minMoveThreshold = 0.1f;
+    private AudioSource audioSource;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         initialCameraPosition = Camera.main.transform.position;
+        audioSource = GetComponent<AudioSource>();
+        audioSource.loop = false;
     }
 
     void Update()
@@ -41,13 +46,27 @@ public class Player : MonoBehaviour
                 moveDirection = 2.0f; // Up
             else if (moveVertical < 0)
                 moveDirection = 4.0f; // Down
-           // if (pasos != null)
+            if (movement.magnitude > minMoveThreshold)
+            {
+                if (!isMoving)
+                {
+                    AudioManager.instance.PlaySoundEffect(pasos);
+                    isMoving = true;
+                }
+            }
+            else
             {
                 //AudioManager.instance.PlaySoundEffect(pasos);
+                isMoving = false;
             }
         }
+        else
+        {
+            isMoving = false;
+        }
 
-        animator.SetFloat("MoveDirection", moveDirection);
+
+animator.SetFloat("MoveDirection", moveDirection);
 
         transform.Translate(movement * speed * Time.deltaTime, Space.World);
 
