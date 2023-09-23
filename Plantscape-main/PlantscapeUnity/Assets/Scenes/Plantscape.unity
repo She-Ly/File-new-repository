@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -256,7 +256,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1286465912}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CuidarPlantaVida, Assembly-CSharp
         m_MethodName: EsconderOpciones
         m_Mode: 1
@@ -268,7 +268,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1286465912}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CuidarPlantaVida, Assembly-CSharp
         m_MethodName: RegarPlanta
         m_Mode: 1
@@ -506,7 +506,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &23130142
 BoxCollider:
@@ -841,7 +841,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37508813}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.717, y: 0.907, z: -0.66}
+  m_LocalPosition: {x: -1.723, y: 0.907, z: -0.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1115,7 +1115,7 @@ Transform:
   - {fileID: 493275483}
   - {fileID: 1423125180}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &49250429
 BoxCollider:
@@ -1175,6 +1175,161 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &69199757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 69199758}
+  - component: {fileID: 69199761}
+  - component: {fileID: 69199760}
+  - component: {fileID: 69199759}
+  m_Layer: 6
+  m_Name: SlotTierraPlantavida2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &69199758
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69199757}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.09675759, y: 0.087497115, z: -0.2590201}
+  m_LocalScale: {x: 0.59502494, y: 0.4936346, z: 1.4712604}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 905483401}
+  m_Father: {fileID: 2076224002}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &69199759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69199757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35927a888fa43a469f8a31673af909b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  llave: {fileID: 2087838679}
+  nota: {fileID: 1550994827}
+  _prompt: Plantavida
+  interactionPromptUI: {fileID: 1108659863}
+  firstDialogue:
+    sentences:
+    - "\xBFQu\xE9 crees que necesite?"
+    - "Has cultivado exitosamente una PLANTAVIDA. Esta es la planta m\xE1s resiliente
+      de Undervania."
+    - Hay quienes dicen que no muere nunca.
+    - "La plantavida dice: \xA1Muchas gracias! Las buenas acciones nunca se olvidan
+      ;)"
+    hasDifferentInteractions: 01000000
+  secondDialogue:
+    sentences:
+    - "\xA1Qu\xE9 bonito! Parece que esa melod\xEDa le trajo buenos recuerdos a esta
+      plantavida y ahora se siente m\xE1s conectada a ti."
+    - Como agradecimiento, quiere darte un consejo.
+    - "Nunca olvides que incluso las acciones m\xE1s peque\xF1as pueden generar los
+      m\xE1s grandes cambios."
+    - "Por cierto, me parece que podr\xEDa ser una buena idea mirar debajo de la
+      nota de la mesita."
+    hasDifferentInteractions: 
+  thirdDialogue:
+    sentences:
+    - No pasa nada. Esta planta parece demasiado hambrienta para querer escuchar
+      canciones.
+    hasDifferentInteractions: 
+  fourthDialogue:
+    sentences:
+    - "Esta planta ya no est\xE1 hambrienta."
+    hasDifferentInteractions: 
+  continueButton: {fileID: 1179447991}
+  optionsButton: {fileID: 119188734}
+  waterManager: {fileID: 2121235720}
+--- !u!65 &69199760
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69199757}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.34622374, y: 0.35584062, z: 0.11079892}
+  m_Center: {x: -0.019072263, y: 0.006987186, z: -0.044600524}
+--- !u!212 &69199761
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69199757}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 863119d027f22f24cbc3a6ddafc8b159, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.16, y: 0.16}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &79278351
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,7 +1468,7 @@ Transform:
   - {fileID: 857049611}
   - {fileID: 1363178402}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &119188734
 GameObject:
@@ -1915,7 +2070,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &208862175
 MonoBehaviour:
@@ -2719,7 +2874,7 @@ Transform:
   - {fileID: 1219078953}
   - {fileID: 429536455}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &384494846
 GameObject:
@@ -2842,6 +2997,144 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384494846}
   m_CullTransparentMesh: 1
+--- !u!1 &385991358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 385991359}
+  - component: {fileID: 385991362}
+  - component: {fileID: 385991361}
+  - component: {fileID: 385991360}
+  m_Layer: 6
+  m_Name: SlotTierraPlantavida
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &385991359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385991358}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.09675759, y: 0.087497115, z: -0.2590201}
+  m_LocalScale: {x: 0.5950249, y: 0.49363458, z: 1.4712605}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2076224002}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &385991360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385991358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4c2a71e80e92c44b7711658d165f01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prompt: Tierra
+  planta: {fileID: 690486451}
+  newSlot: {fileID: 0}
+  inventory: {fileID: 2121235721}
+  continueButton: {fileID: 1179447991}
+  optionsButton: {fileID: 1573265698}
+  firstDialogue:
+    sentences:
+    - "Parece que podr\xEDas plantar algo aqu\xED."
+    hasDifferentInteractions: 01
+  secondDialogue:
+    sentences:
+    - "A\xFAn no tienes nada para plantar aqu\xED."
+    hasDifferentInteractions: 00
+  thirdDialogue:
+    sentences:
+    - "Has plantado una plantavida, pero todav\xEDa se ve algo triste."
+    hasDifferentInteractions: 
+  interactionPromptUI: {fileID: 1108659863}
+--- !u!65 &385991361
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385991358}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.34622374, y: 0.35584062, z: 0.11079892}
+  m_Center: {x: -0.019072263, y: 0.006987186, z: -0.044600524}
+--- !u!212 &385991362
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385991358}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 863119d027f22f24cbc3a6ddafc8b159, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.16, y: 0.16}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &405385299
 GameObject:
   m_ObjectHideFlags: 0
@@ -3486,7 +3779,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469709138}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.717, y: 0.907, z: 0.376}
+  m_LocalPosition: {x: -1.812, y: 0.907, z: 0.376}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3660,7 +3953,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493275482}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0.122, y: -0.07575929, z: 0.871}
+  m_LocalPosition: {x: 0.122, y: -0.07575929, z: 2.149}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5206,7 +5499,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1286465912}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CuidarPlantaVida, Assembly-CSharp
         m_MethodName: EsconderOpciones
         m_Mode: 1
@@ -5218,7 +5511,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1286465912}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CuidarPlantaVida, Assembly-CSharp
         m_MethodName: Cantar
         m_Mode: 1
@@ -7108,12 +7401,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905483398}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.010260744, y: 10.439791, z: -0.07022514}
-  m_LocalScale: {x: 1.5255878, y: 54.286503, z: 1.5255878}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.022912668, y: -0.04252246, z: -0.03597264}
+  m_LocalScale: {x: 0.4019965, y: 0.16258024, z: 0.48456466}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1286465911}
+  m_Father: {fileID: 69199758}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &905483402
@@ -7160,7 +7453,7 @@ Transform:
   m_Children:
   - {fileID: 652845971}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &917255372
 GameObject:
@@ -7367,8 +7660,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: d65a71adbcef40040ba62fefc09005e7, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -7424,7 +7717,7 @@ Transform:
   - {fileID: 2087838683}
   - {fileID: 2076224002}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &950839992
 MonoBehaviour:
@@ -7458,8 +7751,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 0.29507065, z: 0.9133387}
-  m_Center: {x: 0, y: 0.18095231, z: -0.04333064}
+  m_Size: {x: 0.9665807, y: 0.29507065, z: 0.99907213}
+  m_Center: {x: 0.016709596, y: 0.18095231, z: 0.11751756}
 --- !u!1 &953876203
 GameObject:
   m_ObjectHideFlags: 0
@@ -8413,7 +8706,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7573175037013696735}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SlotSetUpRoom, Assembly-CSharp
         m_MethodName: Plantar
         m_Mode: 1
@@ -8425,7 +8718,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7573175037013696735}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SlotSetUpRoom, Assembly-CSharp
         m_MethodName: EsconderOpciones
         m_Mode: 1
@@ -10480,8 +10773,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 0.93057907}
+  m_Center: {x: 0, y: 0, z: 0.03471048}
 --- !u!23 &1212989534
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11261,12 +11554,12 @@ GameObject:
   - component: {fileID: 1286465913}
   - component: {fileID: 1286465912}
   m_Layer: 6
-  m_Name: SlotTierraPlantavida2
+  m_Name: SlotTierraPlantavida24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1286465911
 Transform:
   m_ObjectHideFlags: 0
@@ -11275,11 +11568,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286465910}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.11199999, y: 0.09442228, z: -0.3031}
+  m_LocalPosition: {x: -0.11199999, y: 0.09442228, z: -0.5093}
   m_LocalScale: {x: 0.15679067, y: 0.0044062133, z: 0.15679067}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 905483401}
+  m_Children: []
   m_Father: {fileID: 2076224002}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11358,7 +11650,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286465910}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -11654,7 +11946,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1329985152
 GameObject:
@@ -12315,6 +12607,140 @@ MonoBehaviour:
   rotationAmount: 90
   rotationSpeed: 5
   fixedXRotation: 30
+--- !u!1 &1403056474
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1403056477}
+  - component: {fileID: 1403056476}
+  - component: {fileID: 1403056475}
+  - component: {fileID: 1403056479}
+  - component: {fileID: 1403056478}
+  m_Layer: 7
+  m_Name: enredadera
+  m_TagString: LadderCollider
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1403056475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403056474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ccfdb42d201c5d4bb25e4196ab6e30f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 963194225}
+  fixedXRotation: 0
+--- !u!212 &1403056476
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403056474}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: d548d0cd93725ac4e8f0235b55144a7f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.16, y: 0.16}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1403056477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403056474}
+  m_LocalRotation: {x: -0, y: 0.70881844, z: -0, w: 0.705391}
+  m_LocalPosition: {x: -0.671, y: 1.381, z: 0.706}
+  m_LocalScale: {x: 0.38, y: 0.38, z: 0.38}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 90.278, z: 0}
+--- !u!114 &1403056478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403056474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e01d8a33fe6114abcfec1e3adc876b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1403056479
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403056474}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.35863233, y: 2.2915354, z: 0.54768956}
+  m_Center: {x: -0.07117973, y: -0.09684139, z: -0.13764693}
 --- !u!1 &1419100929
 GameObject:
   m_ObjectHideFlags: 0
@@ -12419,7 +12845,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423125179}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0.122, y: -1.761, z: 0.871}
+  m_LocalPosition: {x: 0.122, y: -1.761, z: 1.949}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12997,7 +13423,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.577
+  m_Volume: 0.171
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -13109,7 +13535,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1505215205
 AudioSource:
@@ -13385,7 +13811,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1546022751
 GameObject:
@@ -16734,7 +17160,7 @@ Transform:
   - {fileID: 953876208}
   - {fileID: 2005791867}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2005791862
 GameObject:
@@ -17021,7 +17447,7 @@ Transform:
   - {fileID: 1926962337}
   - {fileID: 983172339}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2076224001
 GameObject:
@@ -17051,8 +17477,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 385991359}
   - {fileID: 2801714602788641270}
   - {fileID: 1286465911}
+  - {fileID: 69199758}
   m_Father: {fileID: 950839991}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17601,6 +18029,7 @@ GameObject:
   - component: {fileID: 2121235719}
   - component: {fileID: 2121235720}
   - component: {fileID: 2121235721}
+  - component: {fileID: 2121235722}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -17689,7 +18118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121235710}
   m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: -0.518, y: 1.114, z: -0.42}
+  m_LocalPosition: {x: -0.226, y: 1.102, z: 0.599}
   m_LocalScale: {x: 1.0495373, y: 1.0495373, z: 1.0495373}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -17839,6 +18268,102 @@ MonoBehaviour:
     hasDifferentInteractions: 
   itemASelec: {fileID: 8300000, guid: f3b2d0cec33d44b4287263b543f453bf, type: 3}
   itemSeleccionado: {fileID: 8300000, guid: 8d9841b50e33e9c45a862898f7ff61aa, type: 3}
+--- !u!82 &2121235722
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121235710}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2123435372
 GameObject:
   m_ObjectHideFlags: 0
@@ -17944,7 +18469,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2130245879
 BoxCollider:
@@ -25636,7 +26161,7 @@ GameObject:
   - component: {fileID: 583190442684102997}
   - component: {fileID: 7573175037013696735}
   m_Layer: 6
-  m_Name: SlotTierraPlantavida
+  m_Name: SlotTierraPlantavida23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26345,7 +26870,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2581336028700142573}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.11199999, y: 0.09442228, z: -0.3031}
+  m_LocalPosition: {x: -0.11199999, y: 0.09442228, z: -0.5232}
   m_LocalScale: {x: 0.15679067, y: 0.0044062133, z: 0.15679067}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40601,7 +41126,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 2.0002503, y: 2.000251, z: 0.05118761}
   m_Center: {x: -4.5474735e-13, y: 0.0000000013969839, z: 0.000000028871007}
@@ -43441,7 +43966,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8004267283126077821
 Transform:
   m_ObjectHideFlags: 0

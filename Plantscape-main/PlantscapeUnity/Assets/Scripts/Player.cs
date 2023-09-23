@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
         }
 
 
-animator.SetFloat("MoveDirection", moveDirection);
+        animator.SetFloat("MoveDirection", moveDirection);
 
         transform.Translate(movement * speed * Time.deltaTime, Space.World);
 
@@ -74,3 +74,4 @@ animator.SetFloat("MoveDirection", moveDirection);
 
 
 }
+
