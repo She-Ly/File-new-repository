@@ -841,7 +841,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 37508813}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1.723, y: 0.907, z: -0.66}
+  m_LocalPosition: {x: -0.707, y: 0.907, z: -0.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -861,8 +861,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportDestination: {fileID: 1423125180}
-  teleportDelay: 2
-  transportador: {fileID: 0}
+  teleportDelay: 4
+  transportador: {fileID: 8300000, guid: dad9fbf4923945d4ba49850f15f6f29d, type: 3}
 --- !u!65 &37508816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1188,7 +1188,7 @@ GameObject:
   - component: {fileID: 69199760}
   - component: {fileID: 69199759}
   m_Layer: 6
-  m_Name: SlotTierraPlantavida2
+  m_Name: SlotTierraPlantavida26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1205,8 +1205,7 @@ Transform:
   m_LocalPosition: {x: -0.09675759, y: 0.087497115, z: -0.2590201}
   m_LocalScale: {x: 0.59502494, y: 0.4936346, z: 1.4712604}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 905483401}
+  m_Children: []
   m_Father: {fileID: 2076224002}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -2065,7 +2064,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208862173}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.48683995, y: 1.246, z: -0.49140453}
+  m_LocalPosition: {x: 0.48683995, y: 1.246, z: -0.486}
   m_LocalScale: {x: 0.9272926, y: 0.688868, z: 0.89923203}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2111,8 +2110,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.0030133, y: 1, z: 1.0216478}
+  m_Center: {x: 0.0015075152, y: 0, z: -0.0108232405}
 --- !u!23 &208862177
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3010,12 +3009,12 @@ GameObject:
   - component: {fileID: 385991361}
   - component: {fileID: 385991360}
   m_Layer: 6
-  m_Name: SlotTierraPlantavida
+  m_Name: SlotTierraPlantavida25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &385991359
 Transform:
   m_ObjectHideFlags: 0
@@ -3779,7 +3778,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469709138}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1.812, y: 0.907, z: 0.376}
+  m_LocalPosition: {x: -0.751, y: 0.907, z: 0.376}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3799,8 +3798,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportDestination: {fileID: 493275483}
-  teleportDelay: 2
-  transportador: {fileID: 0}
+  teleportDelay: 4
+  transportador: {fileID: 8300000, guid: dad9fbf4923945d4ba49850f15f6f29d, type: 3}
 --- !u!65 &469709141
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3953,7 +3952,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493275482}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0.122, y: -0.07575929, z: 2.149}
+  m_LocalPosition: {x: 0.122, y: -0.07575929, z: 0.877}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5272,8 +5271,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.9999999, z: 0.46422663}
+  m_Center: {x: 0, y: 0, z: -0.02911665}
 --- !u!23 &708533658
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7401,12 +7400,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905483398}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.022912668, y: -0.04252246, z: -0.03597264}
-  m_LocalScale: {x: 0.4019965, y: 0.16258024, z: 0.48456466}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.010260744, y: 10.439791, z: -0.103}
+  m_LocalScale: {x: 1.5255879, y: 54.286503, z: 1.5255879}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 69199758}
+  m_Father: {fileID: 1286465911}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &905483402
@@ -11554,12 +11553,12 @@ GameObject:
   - component: {fileID: 1286465913}
   - component: {fileID: 1286465912}
   m_Layer: 6
-  m_Name: SlotTierraPlantavida24
+  m_Name: SlotTierraPlantavida2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1286465911
 Transform:
   m_ObjectHideFlags: 0
@@ -11568,10 +11567,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286465910}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.11199999, y: 0.09442228, z: -0.5093}
+  m_LocalPosition: {x: -0.11199999, y: 0.09442228, z: -0.239}
   m_LocalScale: {x: 0.15679067, y: 0.0044062133, z: 0.15679067}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 905483401}
   m_Father: {fileID: 2076224002}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12619,7 +12619,6 @@ GameObject:
   - component: {fileID: 1403056476}
   - component: {fileID: 1403056475}
   - component: {fileID: 1403056479}
-  - component: {fileID: 1403056478}
   m_Layer: 7
   m_Name: enredadera
   m_TagString: LadderCollider
@@ -12701,25 +12700,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1403056474}
   m_LocalRotation: {x: -0, y: 0.70881844, z: -0, w: 0.705391}
-  m_LocalPosition: {x: -0.671, y: 1.381, z: 0.706}
+  m_LocalPosition: {x: -1.62, y: 1.381, z: 0.706}
   m_LocalScale: {x: 0.38, y: 0.38, z: 0.38}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 90.278, z: 0}
---- !u!114 &1403056478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1403056474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3e01d8a33fe6114abcfec1e3adc876b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1403056479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12845,7 +12832,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423125179}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0.122, y: -1.761, z: 1.949}
+  m_LocalPosition: {x: 0.122, y: -1.761, z: 0.911}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13514,7 +13501,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505215201}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2be7cdcf5b654cc4a90facaba57f0441, type: 3}
   m_Name: 
@@ -13549,7 +13536,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.463
+  m_Volume: 0.275
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -17478,9 +17465,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 385991359}
+  - {fileID: 69199758}
   - {fileID: 2801714602788641270}
   - {fileID: 1286465911}
-  - {fileID: 69199758}
   m_Father: {fileID: 950839991}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18118,7 +18105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121235710}
   m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: -0.226, y: 1.102, z: 0.599}
+  m_LocalPosition: {x: -0.433, y: 1.102, z: -0.441}
   m_LocalScale: {x: 1.0495373, y: 1.0495373, z: 1.0495373}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -18464,7 +18451,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130245877}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.44, y: 2.15, z: -1.09}
+  m_LocalPosition: {x: -0.388, y: 2.15, z: -0.024}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18490,8 +18477,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.8214294, y: 0.26313293, z: 0.76438427}
-  m_Center: {x: 0.8955063, y: -0.27961963, z: 0.54656935}
+  m_Size: {x: 1.9047381, y: 0.5595175, z: 0.89558184}
+  m_Center: {x: 0.3722815, y: -0.13142735, z: 0.50656813}
 --- !u!114 &2130245880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26161,7 +26148,7 @@ GameObject:
   - component: {fileID: 583190442684102997}
   - component: {fileID: 7573175037013696735}
   m_Layer: 6
-  m_Name: SlotTierraPlantavida23
+  m_Name: SlotTierraPlantavida1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26870,7 +26857,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2581336028700142573}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.11199999, y: 0.09442228, z: -0.5232}
+  m_LocalPosition: {x: -0.11199999, y: 0.09442228, z: -0.258}
   m_LocalScale: {x: 0.15679067, y: 0.0044062133, z: 0.15679067}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41126,7 +41113,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 2.0002503, y: 2.000251, z: 0.05118761}
   m_Center: {x: -4.5474735e-13, y: 0.0000000013969839, z: 0.000000028871007}
@@ -43966,7 +43953,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8004267283126077821
 Transform:
   m_ObjectHideFlags: 0

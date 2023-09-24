@@ -22,7 +22,7 @@ public class AutomaticDoor : MonoBehaviour
 
         {
             animator.Play("OpenDoor");
-            Debug.Log("Entro player");
+            //Debug.Log("Entro player");
         }
     }
     private void OnTriggerExit(Collider other)
