@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
-    public Transform teleportDestination; // Arrastra el GameObject de destino aquí en el Inspector
-    public float teleportDelay = 2f; // Tiempo de espera antes de la teletransportación
+    public Transform teleportDestination; // Arrastra el GameObject de destino aquï¿½ en el Inspector
+    public float teleportDelay = 2f; // Tiempo de espera antes de la teletransportaciï¿½n
     private bool canTeleport = true;
     public AudioClip transportador;
 
     private void OnTriggerEnter(Collider other)
     {
-        // Verifica si el jugador ha entrado en el área del objeto y puede teletransportarse
+        // Verifica si el jugador ha entrado en el ï¿½rea del objeto y puede teletransportarse
         if (canTeleport && other.CompareTag("Player"))
         {
-            // Teletransporta al jugador al destino después del tiempo de espera configurado
+            // Teletransporta al jugador al destino despuï¿½s del tiempo de espera configurado
             Invoke("TeleportPlayerDelayed", teleportDelay);
             if (transportador != null)
             {
@@ -26,14 +26,14 @@ public class Teleport : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        // Cancela la teletransportación si el jugador sale del área antes de que ocurra la teletransportación
+        // Cancela la teletransportaciï¿½n si el jugador sale del ï¿½rea antes de que ocurra la teletransportaciï¿½n
         if (other.CompareTag("Player"))
         {
             CancelInvoke("TeleportPlayerDelayed");
         }
     }
 
-    private void TeleportPlayerDelayed()
+    public void TeleportPlayerDelayed()
     {
         // Teletransporta al jugador al destino
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -42,7 +42,7 @@ public class Teleport : MonoBehaviour
             player.transform.position = teleportDestination.position;
         }
 
-        // Reinicia el estado de teletransportación
+        // Reinicia el estado de teletransportaciï¿½n
         canTeleport = true;
     }
 }

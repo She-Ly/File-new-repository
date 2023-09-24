@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AreaContaminada : MonoBehaviour
+public class AreaCaliente : MonoBehaviour
 {
     public Dialogue dialogue;
     public Dialogue secondDialogue;
-    
+
     public Timer timer;
     public GameObject timerUI;
-    public AudioClip contaminado;
-
+    public AudioClip caliente;
+    
     public Inventory inventory;
     public PlantaLista planta;
 
@@ -32,9 +32,9 @@ public class AreaContaminada : MonoBehaviour
                 StartCoroutine(TriggerAndHandleDialogue(dialogue));
                 timer.StartTimer(); // Start the timer
                 timerUI.SetActive(true);
-                if (contaminado != null)
+                if (caliente != null)
                 {
-                    AudioManager.instance.PlayMusic(contaminado);
+                    AudioManager.instance.PlayMusic(caliente);
                 }
             }
         }
