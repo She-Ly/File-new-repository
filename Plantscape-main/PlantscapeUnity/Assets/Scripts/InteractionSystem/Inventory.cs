@@ -34,6 +34,7 @@ public class Inventory : MonoBehaviour
         else
         {
             TriggerDialogue();
+            //dejar objeto ahi
         }
     }
 

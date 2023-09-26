@@ -12,6 +12,8 @@ public class Gato : MonoBehaviour, IInteractable
     public bool isFed = false;
     public GameObject finalKey;
 
+    public Player player;
+
     public GameObject continueButton;
     public GameObject optionsButton;
 
@@ -98,6 +100,7 @@ public class Gato : MonoBehaviour, IInteractable
             finalKey.SetActive(true);
             Destroy(gameObject);
             //cambiar a animaciones con gatito aqui
+            player.ChangeCatSprites();
         }
         else
         {

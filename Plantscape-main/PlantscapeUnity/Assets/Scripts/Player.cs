@@ -72,6 +72,13 @@ public class Player : MonoBehaviour
 
     }
 
+    public void ChangeCatSprites()
+    {
+        animator.SetLayerWeight(0, 0f); // Layer without cat (inactive)
+        animator.SetLayerWeight(1, 1f); // Layer with cat (active)
+
+    }
+
 
 }
 

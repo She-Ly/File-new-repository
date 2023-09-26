@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7d865a2a5fa28fb49a3727da01e94e1f
+guid: 3f92fa6a01f0f9640a431ce3fa9411bd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,11 +110,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ixzdle-Sheet_CAT_0
+      name: XZ_DED_cat-Sheet_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 3
+        x: 10
+        y: 8
         width: 30
         height: 41
       alignment: 0
@@ -124,39 +124,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3c462b9bd6ed70489d158b14b601880
-      internalID: 633345891
+      spriteID: 4a52879889abfff45976702d7ba87188
+      internalID: 854237954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ixzdle-Sheet_CAT_1
+      name: XZ_DED_cat-Sheet_1
       rect:
         serializedVersion: 2
-        x: 46
-        y: 3
-        width: 30
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5df9d699adb93ca40aa84188bcc48c42
-      internalID: -1560631512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ixzdle-Sheet_CAT_2
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 3
+        x: 58
+        y: 8
         width: 30
         height: 40
       alignment: 0
@@ -166,19 +145,82 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36c093ef331adfc40940ec2c127012e4
-      internalID: -949113595
+      spriteID: a70dab1996ee3624b88d9f653ac32a75
+      internalID: 1010187559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ixzdle-Sheet_CAT_3
+      name: XZ_DED_cat-Sheet_2
       rect:
         serializedVersion: 2
-        x: 126
-        y: 3
+        x: 106
+        y: 8
         width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b09783bb985133149a33471f534e93a7
+      internalID: 250373262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XZ_DED_cat-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 8
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4f03fc0d5b70504492c19f347bd0c15
+      internalID: -166509052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XZ_DED_cat-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 12
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b23650ec745a09478933d34bb9869a3
+      internalID: -1667551230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XZ_DED_cat-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 15
+        width: 41
         height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -187,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41e44c28655eb704c9055a4e6c76493f
-      internalID: 1346628344
+      spriteID: 06285a4dde9094c4cbb82f2150e81147
+      internalID: -647326444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ixzdle-Sheet_CAT_4
+      name: XZ_DED_cat-Sheet_6
       rect:
         serializedVersion: 2
-        x: 166
-        y: 3
-        width: 30
-        height: 40
+        x: 291
+        y: 12
+        width: 42
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92c03aab4063c6f41bc9a09130244e54
-      internalID: 1339021951
+      spriteID: 30e443ef026ed344bb76ea87abdc687d
+      internalID: 504439002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ixzdle-Sheet_CAT_5
+      name: XZ_DED_cat-Sheet_7
       rect:
         serializedVersion: 2
-        x: 206
-        y: 3
-        width: 30
-        height: 41
+        x: 338
+        y: 10
+        width: 43
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7a4a18ca9274504eae9d36833f02c7e
-      internalID: -1237007997
+      spriteID: 40a73d17ac07b69449ed52ac94c2ccb4
+      internalID: 493649795
       vertices: []
       indices: 
       edges: []
@@ -238,7 +280,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 144e8418f4da90d4c95eb44c4beaff13
+    spriteID: bcbe894a7c64bc44d9339a665c21c179
     internalID: 0
     vertices: []
     indices: 
@@ -246,12 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ixzdle-Sheet_CAT_0: 633345891
-      ixzdle-Sheet_CAT_1: -1560631512
-      ixzdle-Sheet_CAT_2: -949113595
-      ixzdle-Sheet_CAT_3: 1346628344
-      ixzdle-Sheet_CAT_4: 1339021951
-      ixzdle-Sheet_CAT_5: -1237007997
+      XZ_DED_cat-Sheet_0: 854237954
+      XZ_DED_cat-Sheet_1: 1010187559
+      XZ_DED_cat-Sheet_2: 250373262
+      XZ_DED_cat-Sheet_3: -166509052
+      XZ_DED_cat-Sheet_4: -1667551230
+      XZ_DED_cat-Sheet_5: -647326444
+      XZ_DED_cat-Sheet_6: 504439002
+      XZ_DED_cat-Sheet_7: 493649795
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

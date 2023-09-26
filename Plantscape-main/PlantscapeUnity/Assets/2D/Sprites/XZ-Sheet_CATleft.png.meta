@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7d865a2a5fa28fb49a3727da01e94e1f
+guid: 1513843e8064d194a8147e2817205838
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ixzdle-Sheet_CAT_0
+      name: XZ-Sheet_CATleft_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 3
-        width: 30
-        height: 41
+        x: 8
+        y: 4
+        width: 24
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,40 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3c462b9bd6ed70489d158b14b601880
-      internalID: 633345891
+      spriteID: f92c70151d7bde04f81e401108d0df56
+      internalID: 575735761
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ixzdle-Sheet_CAT_1
+      name: XZ-Sheet_CATleft_1
       rect:
         serializedVersion: 2
-        x: 46
+        x: 48
         y: 3
-        width: 30
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5df9d699adb93ca40aa84188bcc48c42
-      internalID: -1560631512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ixzdle-Sheet_CAT_2
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 3
-        width: 30
+        width: 24
         height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -166,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36c093ef331adfc40940ec2c127012e4
-      internalID: -949113595
+      spriteID: ba05b9ae227e25d469812478ae20d889
+      internalID: 204841177
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ixzdle-Sheet_CAT_3
+      name: XZ-Sheet_CATleft_2
       rect:
         serializedVersion: 2
-        x: 126
-        y: 3
-        width: 30
-        height: 38
+        x: 88
+        y: 4
+        width: 24
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41e44c28655eb704c9055a4e6c76493f
-      internalID: 1346628344
+      spriteID: 52de63aca5f5db5478b27718b2366ffd
+      internalID: -1094283085
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ixzdle-Sheet_CAT_4
+      name: XZ-Sheet_CATleft_3
       rect:
         serializedVersion: 2
-        x: 166
+        x: 128
         y: 3
-        width: 30
-        height: 40
+        width: 24
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,29 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92c03aab4063c6f41bc9a09130244e54
-      internalID: 1339021951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ixzdle-Sheet_CAT_5
-      rect:
-        serializedVersion: 2
-        x: 206
-        y: 3
-        width: 30
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7a4a18ca9274504eae9d36833f02c7e
-      internalID: -1237007997
+      spriteID: c8a70e54fc2d3a143adb58129f6298dd
+      internalID: -673577859
       vertices: []
       indices: 
       edges: []
@@ -238,7 +196,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 144e8418f4da90d4c95eb44c4beaff13
+    spriteID: 61624c587484d7b458fd1f3142f05e51
     internalID: 0
     vertices: []
     indices: 
@@ -246,12 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ixzdle-Sheet_CAT_0: 633345891
-      ixzdle-Sheet_CAT_1: -1560631512
-      ixzdle-Sheet_CAT_2: -949113595
-      ixzdle-Sheet_CAT_3: 1346628344
-      ixzdle-Sheet_CAT_4: 1339021951
-      ixzdle-Sheet_CAT_5: -1237007997
+      XZ-Sheet_CATleft_0: 575735761
+      XZ-Sheet_CATleft_1: 204841177
+      XZ-Sheet_CATleft_2: -1094283085
+      XZ-Sheet_CATleft_3: -673577859
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
