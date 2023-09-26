@@ -11,10 +11,13 @@ public class Timer : MonoBehaviour
     [SerializeField] float remainingTime;
     private bool isTimerActive = false;
 
+    public Animator animator;
+    private Coroutine animCoroutine;
+
     void Start()
     {
         // Initialize the timer but don't start it yet
-        remainingTime = 300; // Adjust this to your initial timer value
+        remainingTime = 70; // Adjust this to your initial timer value
         UpdateTimerDisplay();
     }
 
@@ -27,9 +30,16 @@ public class Timer : MonoBehaviour
         }
         else if (remainingTime <= 0)
         {
+            if (animCoroutine != null)
+            {
+                StopCoroutine(animCoroutine);
+            }
+            animator.SetBool("isDead", true);
+            // Start a new coroutine that waits for 6 seconds
+            animCoroutine = StartCoroutine(WaitForDeathAnim());
+
             remainingTime = 0;
             // Game over logic here
-            GameOver("GameOver");
             timerText.color = Color.red;
             isTimerActive = false;
         }
@@ -62,5 +72,11 @@ public class Timer : MonoBehaviour
     public void GameOver(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    private IEnumerator WaitForDeathAnim()
+    {
+        yield return new WaitForSeconds(6f);
+        GameOver("GameOver");
     }
 }
