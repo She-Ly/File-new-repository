@@ -3,7 +3,15 @@ guid: 827de643b376895408ede6b84ee80027
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - interactionPromptUI: {instanceID: 0}
+  - continueButton: {instanceID: 0}
+  - optionsButton: {instanceID: 0}
+  - waterManager: {instanceID: 0}
+  - newSlot: {instanceID: 0}
+  - colliderPiso: {instanceID: 0}
+  - regarPlanta: {fileID: 8300000, guid: 760f911a7df09b54d90cf86d7ce285c9, type: 3}
+  - canto: {fileID: 8300000, guid: b4f65dda6cf37c44ea17dfd89ad56f7f, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

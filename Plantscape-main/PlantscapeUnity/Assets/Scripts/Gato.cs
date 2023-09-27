@@ -22,6 +22,10 @@ public class Gato : MonoBehaviour, IInteractable
     public Dialogue thirdDialogue;
     public Dialogue fourthDialogue;
 
+    public AudioClip comer;
+    public AudioClip ronroneo;
+
+
     private bool isDialogueInProgress = false;
     public GameObject interactionPromptUI; 
 
@@ -83,6 +87,10 @@ public class Gato : MonoBehaviour, IInteractable
         {
             inventory.UseItem(comida.comidaItem);
             isFed = true;
+            if (comer != null)
+            {
+                AudioManager.instance.PlaySoundEffect(comer);
+            }
         }
         else
         {
@@ -101,6 +109,10 @@ public class Gato : MonoBehaviour, IInteractable
             Destroy(gameObject);
             //cambiar a animaciones con gatito aqui
             player.ChangeCatSprites();
+            if (ronroneo != null)
+            {
+                AudioManager.instance.PlaySoundEffect(ronroneo);
+            }
         }
         else
         {

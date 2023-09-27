@@ -24,6 +24,10 @@ public class CuidarPlantaVida : MonoBehaviour, IInteractable
     public WaterManager waterManager;
     private bool isWatered = false;
 
+    public AudioClip regarPlanta;
+    public AudioClip canto2;
+
+
     public bool Interact(Interactor interactor)
     {
         if (isDialogueInProgress)
@@ -83,6 +87,10 @@ public class CuidarPlantaVida : MonoBehaviour, IInteractable
             StartCoroutine(TriggerAndHandleDialogue(secondDialogue));
             llave.SetActive(true);
             nota.SetActive(false);
+            if (canto2 != null)
+            {
+                AudioManager.instance.PlaySoundEffect(canto2);
+            }
         }
 
         else
@@ -97,6 +105,10 @@ public class CuidarPlantaVida : MonoBehaviour, IInteractable
         if (isWatered)
         {
             StartCoroutine(TriggerAndHandleDialogue(fourthDialogue));
+            if (regarPlanta != null)
+            {
+                AudioManager.instance.PlaySoundEffect(regarPlanta);
+            }
         }
         else
         {

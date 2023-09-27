@@ -3,7 +3,9 @@ guid: 80403849101348a4dbb4514dfbd1efd9
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - yei: {fileID: 8300000, guid: b77c5af1338af31498c78155e76ff588, type: 3}
+  - panelFinal: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

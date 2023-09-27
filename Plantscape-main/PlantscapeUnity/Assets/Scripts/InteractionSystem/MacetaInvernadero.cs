@@ -18,6 +18,9 @@ public class MacetaInvernadero : MonoBehaviour, IInteractable
     public Dialogue secondDialogue;
     public Dialogue thirdDialogue;
 
+    public AudioClip sembrarr;
+
+
     private bool isDialogueInProgress = false;
     public GameObject interactionPromptUI; 
 
@@ -81,6 +84,10 @@ public class MacetaInvernadero : MonoBehaviour, IInteractable
             Destroy(gameObject);
             StartCoroutine(TriggerAndHandleDialogue(thirdDialogue));
             inventory.UseItem(seed.seedItem);
+            if (sembrarr != null)
+            {
+                AudioManager.instance.PlaySoundEffect(sembrarr);
+            }
         }
         else
         {

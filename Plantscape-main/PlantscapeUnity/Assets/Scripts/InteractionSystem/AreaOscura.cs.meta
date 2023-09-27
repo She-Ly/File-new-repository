@@ -3,7 +3,10 @@ guid: dbbc6938496cc434c8dd3668625d647e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - oscuro: {fileID: 8300000, guid: 9a56b7884fc6c8349b5fbed3d5c544a7, type: 3}
+  - inventory: {instanceID: 0}
+  - planta: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

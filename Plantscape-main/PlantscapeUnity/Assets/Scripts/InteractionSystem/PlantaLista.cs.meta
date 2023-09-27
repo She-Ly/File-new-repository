@@ -3,7 +3,14 @@ guid: 0503452462d80d64bb01c6d3fb618db9
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - continueButton: {instanceID: 0}
+  - optionsButton: {instanceID: 0}
+  - interactionPromptUI: {instanceID: 0}
+  - dialogueManager: {instanceID: 0}
+  - plantaItem: {instanceID: 0}
+  - inventory: {instanceID: 0}
+  - agarrarPlanta: {fileID: 8300000, guid: 9a8358f20b10e45449cd3e78a020d296, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

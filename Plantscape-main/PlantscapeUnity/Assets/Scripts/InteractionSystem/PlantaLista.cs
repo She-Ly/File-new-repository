@@ -83,6 +83,10 @@ public class PlantaLista : MonoBehaviour, IInteractable
             inventory.AddItem(plantaItem);
 
             Destroy(gameObject);
+            if (agarrarPlanta != null)
+            {
+                AudioManager.instance.PlaySoundEffect(agarrarPlanta);
+            }
         }
         TriggerDialogue(secondDialogue);
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12225,7 +12225,7 @@ MonoBehaviour:
     hasDifferentInteractions: 
   timer: {fileID: 1607706223}
   timerUI: {fileID: 1607706219}
-  caliente: {fileID: 0}
+  caliente: {fileID: 8300000, guid: 72ca584b1bd9da44bb13fb48c857e8ad, type: 3}
   inventory: {fileID: 2121235721}
   planta: {fileID: 418598884}
 --- !u!65 &826320452
@@ -22132,7 +22132,7 @@ MonoBehaviour:
     sentences:
     - "Parece que tienes una planta luz contigo. Ya puedes ver bien esta \xE1rea."
     hasDifferentInteractions: 
-  oscuro: {fileID: 0}
+  oscuro: {fileID: 8300000, guid: 9a56b7884fc6c8349b5fbed3d5c544a7, type: 3}
   inventory: {fileID: 2121235721}
   planta: {fileID: 457222992}
 --- !u!65 &1436805144

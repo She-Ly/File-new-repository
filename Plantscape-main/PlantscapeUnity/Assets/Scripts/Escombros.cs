@@ -19,6 +19,9 @@ public class Escombros : MonoBehaviour, IInteractable
     public Dialogue dialogue;
     public DialogueManager dialogueManager;
 
+    public AudioClip escom;
+
+
     public bool Interact(Interactor interactor)
     {
         if (isDialogueInProgress)
@@ -78,6 +81,10 @@ public class Escombros : MonoBehaviour, IInteractable
         Destroy(escombros);
         Destroy(gameObject);
         newCat.SetActive(true);
+        if (escom != null)
+        {
+            AudioManager.instance.PlaySoundEffect(escom);
+        }
     }
 
     public void EsconderOpciones()

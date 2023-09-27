@@ -3,7 +3,14 @@ guid: c1acba0d01dd84c45914130034887d42
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - interactionPromptUI: {instanceID: 0}
+  - continueButton: {instanceID: 0}
+  - optionsButton: {instanceID: 0}
+  - plantaNueva: {instanceID: 0}
+  - waterManager: {instanceID: 0}
+  - agarrarPlanta: {fileID: 8300000, guid: 9a8358f20b10e45449cd3e78a020d296, type: 3}
+  - regarPlanta: {fileID: 8300000, guid: 760f911a7df09b54d90cf86d7ce285c9, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

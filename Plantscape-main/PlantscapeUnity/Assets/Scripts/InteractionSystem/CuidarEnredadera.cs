@@ -22,6 +22,11 @@ public class CuidarEnredadera : MonoBehaviour, IInteractable
     public GameObject newSlot;
     public GameObject colliderPiso;
 
+    public AudioClip regarPlanta;
+    public AudioClip canto;
+
+
+
     public bool Interact(Interactor interactor)
     {
         if (isDialogueInProgress)
@@ -80,11 +85,19 @@ public class CuidarEnredadera : MonoBehaviour, IInteractable
         newSlot.SetActive(true);
         Destroy(gameObject);
         colliderPiso.SetActive(false);
+        if (regarPlanta != null)
+        {
+            AudioManager.instance.PlaySoundEffect(regarPlanta);
+        }
     }
 
     public void Cantar()
     {
         StartCoroutine(TriggerAndHandleDialogue(secondDialogue));
+        if (canto != null)
+        {
+            AudioManager.instance.PlaySoundEffect(canto);
+        }
     }
 
     public void EsconderOpciones()

@@ -3,7 +3,12 @@ guid: fd2caf2d0cbe3bc49957e9c88223778e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - timer: {instanceID: 0}
+  - timerUI: {instanceID: 0}
+  - contaminado: {fileID: 8300000, guid: 18ee95013164fb440b9e4e673218ba0b, type: 3}
+  - inventory: {instanceID: 0}
+  - planta: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
