@@ -21,7 +21,7 @@ public class MacetaSetUpRoom : MonoBehaviour, IInteractable
     private bool isDialogueInProgress = false;
     public GameObject interactionPromptUI;
 
-    public AudioClip sembrarr
+    public AudioClip sembrarr;
 
 
     public bool Interact(Interactor interactor)
