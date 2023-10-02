@@ -13,15 +13,46 @@ public class Player : MonoBehaviour
     public float minMoveThreshold = 0.1f;
     private AudioSource audioSource;
 
+    Rigidbody rb;
+    public float climbSpeed = 0.07f;
+    public LayerMask groundLayer;
+
+    public enum PlayerState
+    {
+        Walking,
+        Climbing
+    }
+
+    public PlayerState currentState = PlayerState.Walking; // Default state is walking
+
     void Start()
     {
         animator = GetComponent<Animator>();
         initialCameraPosition = Camera.main.transform.position;
         audioSource = GetComponent<AudioSource>();
         audioSource.loop = false;
+
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
+{
+    if (currentState == PlayerState.Walking)
+    {
+        // Handle walking logic
+        HandleWalking();
+    }
+    else if (currentState == PlayerState.Climbing)
+    {
+        // Handle climbing logic
+        HandleClimbing();
+
+    }
+
+}
+
+
+    private void HandleWalking()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
@@ -69,8 +100,64 @@ public class Player : MonoBehaviour
         animator.SetFloat("MoveDirection", moveDirection);
 
         transform.Translate(movement * speed * Time.deltaTime, Space.World);
-
     }
+
+    private void HandleClimbing()
+{
+    float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+        Vector2 input = SquareToCircle(new Vector2(h, v));
+
+        if (rb)
+        {
+            rb.velocity = transform.TransformDirection(input) * speed;
+        }
+    }
+
+    Vector2 SquareToCircle(Vector2 input)
+    {
+        return (input.sqrMagnitude >= 1f) ? input.normalized : input;
+    }
+
+
+    // Method to set the player's state
+    public void SetState(PlayerState newState)
+    {
+        // Ensure you perform any necessary state-specific setup or cleanup here.
+
+        currentState = newState;
+
+        // Depending on the state, you might want to disable certain behaviors/animations or enable others.
+        // For example, you might want to disable walking animations when climbing.
+
+        if (newState == PlayerState.Climbing)
+        {
+        }
+        else if (newState == PlayerState.Walking)
+        {
+        }
+    }
+
+    public bool IsGrounded()
+{
+    Collider playerCollider = GetComponent<Collider>();
+    
+    // Calculate a small offset above the player's feet.
+    float offset = 0.1f; // Adjust this offset based on your character's size.
+
+    // Create a sphere to check for ground at the player's feet.
+    Vector3 sphereCenter = transform.position + Vector3.up * offset;
+    float sphereRadius = playerCollider.bounds.extents.x * 0.9f; // Use half of the collider's width as the radius.
+
+    // Use SphereCast to check for ground.
+    RaycastHit hit;
+    if (Physics.SphereCast(sphereCenter, sphereRadius, Vector3.down, out hit, offset + 1f, groundLayer))
+    {
+        return true;
+    }
+    
+    return false;
+}
 
     public void ChangeCatSprites()
     {
@@ -78,7 +165,6 @@ public class Player : MonoBehaviour
         animator.SetLayerWeight(1, 1f); // Layer with cat (active)
 
     }
-
 
 }
 
