@@ -26722,7 +26722,7 @@ MonoBehaviour:
     sentences:
     - "\xA1Excelente! Esperemos que tu semilla germine pronto."
     hasDifferentInteractions: 
-  sembrarr: {fileID: 0}
+  sembrarr: {fileID: 8300000, guid: ef8ab947e126b08428549536446ff501, type: 3}
   interactionPromptUI: {fileID: 1108659863}
 --- !u!1 &1753060639
 GameObject:
