@@ -5095,7 +5095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prompt: Maceta
-  seed: {fileID: 0}
+  seed: {fileID: 1360608499}
   newMaceta: {fileID: 1794327527}
   inventory: {fileID: 2121235721}
   continueButton: {fileID: 1179447991}
