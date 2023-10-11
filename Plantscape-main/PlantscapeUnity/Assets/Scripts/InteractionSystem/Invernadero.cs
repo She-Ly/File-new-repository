@@ -33,7 +33,7 @@ public class Invernadero : MonoBehaviour
             }
             else
             {
-                Destroy(gameObject);
+                //Destroy(gameObject);
             }
         }
     }

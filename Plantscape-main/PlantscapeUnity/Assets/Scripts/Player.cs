@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     Rigidbody rb;
     public float climbSpeed = 0.07f;
     public LayerMask groundLayer;
-
+    public Timer timer;
     public enum PlayerState
     {
         Walking,
@@ -39,6 +39,10 @@ public class Player : MonoBehaviour
 {
     if (currentState == PlayerState.Walking)
     {
+            if (timer.looser) {
+                return;
+            }
+
         // Handle walking logic
         HandleWalking();
     }
@@ -166,5 +170,6 @@ public class Player : MonoBehaviour
 
     }
 
+  
 }
 

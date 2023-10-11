@@ -13,7 +13,7 @@ public class AreaContaminada : MonoBehaviour
 
     public Inventory inventory;
     public PlantaLista planta;
-
+    public GameObject comidagato;
     private bool isDialogueInProgress = false;
 
     private void OnTriggerEnter(Collider other)
@@ -26,6 +26,8 @@ public class AreaContaminada : MonoBehaviour
                 timer.StopAndResetTimer();
                 timerUI.SetActive(false);
                 Destroy(gameObject);
+                if (comidagato != null) 
+                    comidagato.SetActive(true);
             }
             else
             {

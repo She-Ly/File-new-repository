@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ControlDePausa : MonoBehaviour
 {
@@ -34,6 +35,11 @@ public class ControlDePausa : MonoBehaviour
         Time.timeScale = 1f; // Reanudar el tiempo
         panelPausa.SetActive(false);
         juegoPausado = false;
+    }
+
+    public void Reiniciar(int idscene)
+    {
+        SceneManager.LoadScene(idscene);
     }
 }
 

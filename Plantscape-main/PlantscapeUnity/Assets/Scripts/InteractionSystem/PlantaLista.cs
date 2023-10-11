@@ -74,15 +74,16 @@ public class PlantaLista : MonoBehaviour, IInteractable
         }
         return false;
     }
-
+   
     public void AgarrarPlanta()
     {
         if (inventory != null)
         {
             Item plantaItem = GetComponent<ItemObject>().itemReference;
             inventory.AddItem(plantaItem);
-
+           
             Destroy(gameObject);
+
             if (agarrarPlanta != null)
             {
                 AudioManager.instance.PlaySoundEffect(agarrarPlanta);

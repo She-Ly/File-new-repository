@@ -53,6 +53,15 @@ public class AudioManager : MonoBehaviour
     }
     public void PlayMusic(AudioClip music)
     {
+        musicSource.Stop();
+        if (music.name.Equals("setRoom"))
+        {
+            musicSource.loop = true;
+        }
+        else {
+            musicSource.loop = false;
+        }
+
         musicSource.clip = music;
         musicSource.Play();
         isMusicPlaying = true;
